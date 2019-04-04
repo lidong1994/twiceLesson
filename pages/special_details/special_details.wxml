@@ -1,0 +1,33 @@
+<view class="special_banner">
+  <image src='../../images/banner2.jpg' class='banner_image' style='width:100%;'></image>
+</view>
+
+
+<view class='special_lesson_item' wx:for="{{list}}">
+  <view class='special_lesson_item_title'>
+    <text>{{item.title}}</text>
+  </view>
+  <view class='special_lesson_item_list'>
+    <view class='flex_between special_c' wx:for="{{item.items}}" wx:for-item="i">
+      <view>
+        <text class='special_lesson_item_xumu'>{{i.num}}</text>
+        <text class='special_lesson_item_t'>{{i.text}}</text>
+      </view>
+
+      <text class='special_lesson_item_time'>{{i.time}}分钟</text>
+    </view>
+
+  </view>
+</view>
+  <view class='btn'>
+    <view class='flex_around btn_c'>
+      <view class='btn_open b_c'>
+      <image src='../../images/icon_baoming.png'></image>
+        <text class='vip'>开通会员免费看</text>
+      </view>
+      <view class='btn_opens b_c'>
+      <image src='../../images/icon_dianhua.png'></image>
+        <text class='vip'>立即购买￥99</text>
+      </view>
+    </view>
+  </view>

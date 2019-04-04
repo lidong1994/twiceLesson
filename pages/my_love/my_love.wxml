@@ -1,0 +1,13 @@
+<view class="my_love">
+  <view class='my_love_content' wx:for="{{list}}">
+    <view class='flex_between ma_au'>
+      <view class='my_love_image flex'>
+      <image src='../../images/icon_wenzhang.png'></image>
+      <text class='my_love_text ell'>{{item.title}}</text>
+      </view>
+      <view class='my_love_time'>{{item.time}}</view>
+    </view>
+
+  </view>
+
+</view>

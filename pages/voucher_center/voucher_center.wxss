@@ -1,0 +1,75 @@
+.voucher_center{
+  width: 100%;
+
+}
+.voucer_center_content{
+  width: 95%;
+  margin: auto;
+}
+.voucer_center_c text{
+  font-size: 38rpx;
+  color: #333333;
+  padding-left:21rpx;
+
+}
+.voucer_money_text_c{
+height:96rpx;
+width:27%;
+border:4rpx solid #ff8342;
+border-radius: 10rpx;
+text-align:center;
+margin-top: 30rpx;
+line-height: 47rpx;
+
+}
+.voucer_money_text_num{
+  font-size: 32rpx;
+  color: #333333;
+}
+.voucer_money_text_money_{
+  font-size: 30rpx;
+  color: #666666;
+}
+.voucer_money{
+  margin-top: 30rpx;
+}
+.active{
+  background: #ff8342;
+
+}
+.actives{
+  color: #fff;
+}
+.voucher_center_btn{
+  width:100%;
+  margin-top: 78rpx;
+}
+.voucher_center_btn{
+  width: 50%;
+  margin: 88rpx auto;
+  height: 100rpx;
+  color: #fff;
+  font-size: 40rpx;
+  border-radius: 40rpx;
+  text-align: center;
+  background: #ff8342;
+  line-height: 100rpx
+
+}
+.alert{
+  width: 100%;
+
+}
+.alert_voucer{
+  width: 90%;
+  margin: auto;
+}
+.voucer_alert{
+  margin-top: 30rpx;
+  color: #333333;
+  font-size: 32rpx;
+}
+.tishi{
+  color: #333333;
+  font-size: 38rpx;
+}

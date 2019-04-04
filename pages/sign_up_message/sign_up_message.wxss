@@ -1,0 +1,103 @@
+.sign_up_contain{
+  width: 100%;
+}
+.sign_up_s{
+  width: 90%;
+  margin: auto;
+}
+.sign_up_name{
+  margin-top: 30rpx;
+}
+page{
+  background: #FCFCFC;
+}
+.sign_up_select{
+  background: #FFFFFF;
+  height: 100rpx;
+  line-height: 100rpx;
+  margin-top: 20rpx;
+}
+.sign_up_select1{
+    background: #FFFFFF;
+  margin-top: 20rpx;
+}
+.sign_up_select text{
+  font-size: 32rpx;
+}
+.sign_up_select{
+  border-radius: 10rpx;
+
+}
+.sign_up_input_name{
+  color: #999999;
+  padding-left: 25rpx;
+  width:45%;
+
+}
+radio .wx-radio-input.wx-radio-input-checked{
+   border: none;
+   
+}
+.sign_up_input_name1{
+  width: 100%;
+    color: #999999;
+  padding-left: 25rpx;
+padding-top: 25rpx;
+}
+.radio{
+  font-size: 32rpx;
+}
+radio .wx-radio-input.wx-radio-input-checked::before{
+   border-radius: 50%;/* 圆角 */
+   width: 50rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+   height: 50rpx; /* 选中后对勾大小，不要超过背景的尺寸 */
+   line-height: 50rpx;
+   text-align: center;
+   font-size:30rpx; /* 对勾大小 30rpx */
+   color:#fff; /* 对勾颜色 白色 */
+   background: #FE4C6E;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}
+.place-holder{
+  font-size: 32rpx;
+}
+input{
+  font-size: 32rpx;
+  padding-left: 6rpx;
+}
+.sign_up_radio{
+  padding-right: 20rpx;
+}
+.textarea_sign{
+  height: 300rpx;
+  background: #fff;
+  width: 94%;
+
+}
+.textarea{
+font-size: 32rpx;
+}
+textarea{
+  padding-left: 40rpx;
+  padding-top: 20rpx;
+}
+.btn_save{
+  width: 100%;
+    margin-top: 150rpx;
+    margin-bottom: 50rpx;
+}
+.btn{
+  width: 45%;
+  margin: auto;
+  background: #ff7f24;
+  text-align: center;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 10rpx;
+
+}
+.btn text{
+  color: #fff;
+  font-size: 32rpx;
+}

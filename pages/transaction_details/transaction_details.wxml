@@ -1,0 +1,17 @@
+<view class="transaction_details">
+  <view class='transaction_details_c' wx:for="{{list}}">
+    <view class='flex_arounds'>
+      <view class='flex'>
+        <image src='{{item.image}}' class='images'>
+        </image>
+        <view class='transaction_details_title'>
+          <view class='transaction_details_title_s ell'>{{item.title}}</view>
+          <view class='trans_de_lesson'>[{{item.type}}]</view>
+          <view class='t_time_e'>{{item.time}}</view>
+        </view>
+      </view>
+
+      <view class='cure'>-12.30</view>
+    </view>
+  </view>
+</view>

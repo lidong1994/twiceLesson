@@ -1,0 +1,31 @@
+<view class="voucher_center">
+  <view class='voucer_center_content'>
+    <view class='voucer_center_c'>
+      <text>充值金额</text>
+    </view>
+    <view class='voucer_money'>
+      <view class='voucer_money_text flex_around_warp'>
+        <view class='voucer_money_text_c {{tab==index ? "active":""}}' wx:for="{{list}}" wx:for-index="index" data-id='{{index}}' bindtap='select_money'>
+          <view class='voucer_money_text_num {{tab==index ? "actives":""}}'>{{item.title}}</view>
+          <view class='voucer_money_text_money_ {{tab==index ? "actives":""}}'>{{item.money}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='voucher_center_btn'>
+  <view class='voucher_center_btn'>立即充值</view>
+</view>
+
+<view class='alert'>
+  <view class='alert_voucer'>
+    <view class='tishi'>温馨提示</view>
+    <view class='voucer_alert'>
+      1、购买后，账户余额若长时间无变化，请记录好您的用户名，致电400-002-7771
+    </view>
+    <view class='voucer_alert'>
+      2、本服务已经购买/充值成功概不退款，请您理解（此平台不具备退款功能）。
+    </view>
+  </view>
+
+</view>

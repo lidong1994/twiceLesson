@@ -1,0 +1,137 @@
+<!-- 轮播 -->
+<view>
+  <view>
+    <view class='index_seach'>
+      <image src='../../images/icon_sousuo.png' class='sousuo'></image>
+      <input value='请输入您想搜索的内容' class='seach_input'></input>
+    </view>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="index">
+        <swiper-item class="swiper">
+          <image src="{{item.imgUrl}}" class="slide-image" width="355" height="150" data-id="{{item.target}}" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='index_utils'>
+    <view class='flex_around center'>
+      <view class='index_yunying' bindtap='utils' wx:for="{{meunList}}" data-id='{{item.target}}' wx:key="id">
+        <image src='{{item.imgUrl}}'></image>
+        <view class='pt_20 pd_20 index_meun'>{{item.title}}</view>
+      </view>
+    </view>
+  </view>
+  <view class='index_jingxuan'>
+    <view class='index_jingxuan_title'>
+      <view class='index_jingxuan_left'></view>
+      <view class='index_meun_title'>精选专题</view>
+    </view>
+
+    <scroll-view class="scroll-header" scroll-x="true" style="width: 100%">
+      <image src='{{item.imgUrl}}' class='scroll_img' wx:for="{{jingxuan}}" data-id="{{item.target}}" wx:key="index"></image>
+    </scroll-view>
+  </view>
+  <!-- 工具优选 -->
+  <view class='index_youxuan'>
+    <view class='index_jingxuan_title'>
+      <view class='index_jingxuan_left'></view>
+      <view class='index_meun_title'>工具优选</view>
+    </view>
+
+    <scroll-view class="scroll-header" scroll-x="true" style="width: 100%">
+      <image src='{{item.toolthumb}}' class='scroll_img' wx:for="{{tools}}" data-id='{{item.tid}}' wx:key="index"></image>
+    </scroll-view>
+  </view>
+  <!-- 线下课程 -->
+  <view class='index_jingxuan'>
+    <view class='index_jingxuan_title flex_between'>
+      <view class='flex'>
+        <view class='index_jingxuan_left'></view>
+        <view class='index_meun_title'>线下课程</view>
+      </view>
+      <view class='index_more flex'>
+        <text>更多</text>
+        <image src='../../images/right.png'></image>
+      </view>
+    </view>
+    <view class='index_lesson_img'>
+      <image src='{{underlineLesson.thumb}}' mode='scaleToFill' class='index_lesson_img_i'></image>
+    </view>
+  </view>
+  <!-- 在线精选 -->
+  <view class='index_jingxuan'>
+    <view class='index_jingxuan_title flex_between'>
+      <view class='flex'>
+        <view class='index_jingxuan_left'></view>
+        <view class='index_meun_title'>在线精选</view>
+      </view>
+      <view class='index_more flex'>
+        <text>更多</text>
+        <image src='../../images/right.png'></image>
+      </view>
+    </view>
+    <view class='index_lesson_img'>
+      <video id="myVideo" src="{{recommendSubjectsVedio.videoUrl}}" show-center-play-btn="true" custom-cache="{{false}}" objectFit='fill' poster="{{recommendSubjectsVedio.imgUrl}}" catchtap='{{recommendSubjectsVedio.target}}'></video>
+      <view class='index_l'>
+        <view class='index_lesson_title'>
+          <text>{{recommendSubjectsVedio.title}}</text>
+        </view>
+        <view class='index_lesson_time'>
+          <text>时长：{{recommendSubjectsVedio.time}}分钟/节</text>
+          <text class='index_lesson_num'>{{recommendSubjectsVedio.studentCount}}人已学</text>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='index_lesson_more'>
+    <view class='flex index_lesson_ii'>
+      <view class='index_lesson_more_lefts' wx:for="{{recommendSubjectsList}}" wx:key="index" data-id='{{item.target}}'>
+        <image src='{{item.imgUrl}}'></image>
+        <view class='index_lesson_title ell'>
+          <text>{{item.title}}</text>
+        </view>
+        <view class='index_lesson_time'>
+          <text>时长：{{item.time}}分钟/节</text>
+          <text class='index_lesson_num'>{{item.studentCount}}人已学</text>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+
+  <!-- 限免精选 -->
+  <view class='index_free'>
+    <view class='flex'>
+      <view class='index_jingxuan_left'></view>
+      <view class='index_meun_title'>限免精选</view>
+    </view>
+    <view class='index_free_content' wx:for="{{timeLimitList1}}" wx:key="index">
+      <view class='index_free_content_c flexs' data-id='{{item.target}}'>
+        <view class='index_free_img'>
+          <image src='{{item.imgUrl}}'></image>
+        </view>
+        <view class='index_free_text'>
+          <view class='index_free_title ell'>{{item.title}}</view>
+          <view class='index_free_time flex'>
+            <text class='index_free_time_s'>时长：{{item.time}}分钟/节</text>
+            <text class='index_free_time_t'>{{item.people}}人已学</text>
+          </view>
+          <view class='index_free_time ell flex'>
+            <text class='index_free_time_s'>{{item.teacher}}</text>
+            <text class='index_free_time_t ell'>{{item.teacherInfo}}</text>
+          </view>
+          <view class='index_free_time1 flex' wx:for="{{item.list}}" wx:for-item="o">
+            <image src='../../images/time.png' class='time'></image>
+            <text class='index_free_time_t'>倒计时</text>
+            <text class='index_free_time_dao'>{{o.day}}天</text>
+            <text class='index_free_time_dao pl_20'>{{o.hou}}时</text>
+            <text class='index_free_time_dao'>{{o.min}}分</text>
+            <text class='index_free_time_dao'>{{o.sec}}秒</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

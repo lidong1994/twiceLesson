@@ -1,0 +1,53 @@
+<view class="seach flex">
+  <view class='seach_content flex'>
+    <view class='seach_left flex'>
+      <text class='seach_all'>全部</text>
+      <image src='../../images/icon_xiangxia.png' wx-if="{{hidden==true}}" bindtap='seach_type'></image>
+      <image wx-if="{{hidden==false}}" src='../../images/icon_xiangshang.png' bindtap='seach_type'></image>
+    </view>
+    <input class='seach_input' placeholder='咨询' placeholder-class='pla_seach' bindinput='seach_input' bindblur='routeToSearchResPage' value="{{seach_value}}"></input>
+  </view>
+  <text class='seach_btn' bindtap='seach'>搜索</text>
+</view>
+<view class='seach_no center' hidden='{{input_null}}'>
+  <view>
+    <image src='../../images/img_sousuo.png'></image>
+  </view>
+  <view class='seach_content_t'>{{input_value}}</view>
+</view>
+<view class='hot_seach'>
+  <view class='hot_seach_content'>
+    <view class='hot_seach_text'>热门搜索</view>
+    <view class='flex_between_warp seach_margin'>
+      <view class='hot_seach_t' wx:for="{{hotSeach}}">{{item.title}}</view>
+    </view>
+  </view>
+</view>
+<view class='seach_history'>
+  <view class='hot_seach_content'>
+    <view class='flex_between'>
+      <text class='hot_seach_text'>搜索历史</text>
+      <image src='../../images/icon_bxh.png' class='seach_delete_image' catchtap='clearHistory'></image>
+    </view>
+  </view>
+
+</view>
+<view class='seach_history_list'>
+  <view class='flex seach_history_list_text' wx:for="{{history}}">
+    <text class='seach_history_title'>{{item}}</text>
+    <text class='seach_history_all'>{{item.type}}</text>
+    <text class='gang'>/</text>
+    <text class='seach_history_type'>{{item.lesson}}</text>
+  </view>
+</view>
+
+<view class="con" hidden='{{hidden}}'>
+  <view class="ys-mask"></view>
+  <view class='ys-dialog' style='position:fixed;top:{{ipad}}%'>
+    <view class='header_seach_type'>
+      <view class='flex_between_warp header_seach_ccc'>
+      <text wx:for="{{type}}" wx:for-index="index" data-id="{{index}}" data-name="{{item.title}}" catchtap='select_type' class='seach_type {{tab==index ? "active" :""}}'>{{item.title}}</text>
+      </view>
+    </view>
+  </view>
+</view>

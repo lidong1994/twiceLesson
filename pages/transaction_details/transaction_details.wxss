@@ -1,0 +1,44 @@
+.images {
+  width: 110rpx;
+  height: 110rpx;
+}
+
+.transaction_details {
+  width: 100%;
+}
+
+.transaction_details_c {
+  width: 90%;
+  margin: auto;
+  border-bottom: 1px solid #efefef;
+  height: 188rpx;
+}
+
+.flex_arounds {
+  display: flex;
+  justify-content: space-around;
+}
+
+.transaction_details_title_s, .trans_de_lesson {
+  font-size: 32rpx;
+  color: #323232;
+}
+
+.t_time_e {
+  font-size: 32rpx;
+  color: #999;
+}
+
+.transaction_details_title_s {
+  width: 95%;
+}
+
+.transaction_details_title {
+  padding-left: 30rpx;
+  line-height: 53rpx;
+  padding-top: 20rpx;
+}
+
+.cure {
+  padding-top: 20rpx;
+}

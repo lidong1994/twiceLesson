@@ -1,0 +1,54 @@
+<view class="contains">
+  <view class='tools_d_header'>
+    <image src='../../images/1111.jpg' mode='aspecFill'></image>
+  </view>
+
+  <view class='tools_header_title'>
+    <view class='flex_between tools_header_title_pd'>
+      <view class='tools_header_title_t'>
+        <view class='tools_header_name'>生产区值班表</view>
+        <view class='tools_header_price'>
+          <text class='tools_header_price_vip'>会员</text>
+          <text class='tools_header_price_vip_'>￥3</text>
+          <text class='tools_header_price_place'>原价￥5</text>
+        </view>
+      </view>
+      <view class='come_buy'>立即购买</view>
+    </view>
+  </view>
+  <view class='share'>
+    <view class='flex_between tools_header_title_pd border-top'>
+      <view class='share_love flex'>
+        <image src='../../images/icon_soucang_unselect.png'></image>
+        <text class='pl_10'>收藏</text>
+      </view>
+      <view class='share_love flex'>
+        <image src='../../images/icon_dz_unselect.png'></image>
+        <text class='pl_10'>4人</text>
+      </view>
+      <view class='share_love flex'>
+        <image src='../../images/icon_fenxiang.png'></image>
+        <text class='pl_10'>分享</text>
+      </view>
+    </view>
+  </view>
+
+ <view class='study_lesson'>
+     <view class='flex'>
+      <view class='index_jingxuan_left'></view>
+      <view>课程推荐</view>
+    </view>
+      <view class='study_lesson_c flex_warp' >
+        <view class='study_c_left' wx:for="{{lesson}}">
+          <image src='{{item.images}}' class='study_c_left_img'></image>
+          <view class='ell study_c_title'>{{item.title}}</view>
+          <view class='index_lesson_time'>
+            <text>时长：{{item.time}}分钟/节</text>
+            <text class='index_lesson_num'>{{item.people}}人已学</text>
+          </view>
+        </view>
+
+      </view>
+
+    </view>
+</view>

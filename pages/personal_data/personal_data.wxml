@@ -1,0 +1,89 @@
+<view class='cc'></view>
+<view class="person_data contents">
+
+  <view class='person_data_content flex_between'>
+    <view class='person_data_contentt flex'>
+      <view class='count_content'>
+        <text class='person_count_name'>账号</text>
+      </view>
+
+      <view class='input_content'>
+        <input type='text' placeholder='快乐的小猫' placeholder-class='person_count' class='input' bindinput='count_name'></input>
+      </view>
+
+    </view>
+    <image src='../../images/icon_bianji.png' class='bianji'></image>
+  </view>
+
+
+  <view class='person_data_content flex_between'>
+    <view class='person_data_contentt flex'>
+      <view class='count_content'>
+        <text class='person_count_name'>手机号</text>
+      </view>
+
+      <view class='input_content'>
+        <input type='text' placeholder='138-3838-3838' placeholder-class='person_count' class='input' maxlength='11' bindinput='phone_value'></input>
+      </view>
+
+    </view>
+    <text class='person_count'>更换</text>
+  </view>
+</view>
+<view class="person_data1 contents">
+
+  <view class='person_data_content po_re flex_between'>
+    <view class='person_data_contentt flex'>
+      <view class='count_contents'>
+        <text class='person_count_names'>餐饮种类</text>
+      </view>
+          <view class="picker">
+            <input type='text' placeholder='选择餐饮类型' placeholder-class='person_count' value='{{selectFoodName}}' class='input'></input>
+          </view>
+    </view>
+    <image src='../../images/icon_more.png' class='bianji'  bindtap='res_'></image>
+  </view>
+  <view class='person_data_content po_re flex_between'>
+    <view class='person_data_contentt flex'>
+      <view class='count_contents'>
+        <text class='person_count_name'>职位</text>
+      </view>
+          <view class="picker">
+            <input type='text' placeholder='选择职位' placeholder-class='person_count' value='{{selectPosition}}' class='input'></input>
+          </view>
+    </view>
+    <image src='../../images/icon_more.png' class='bianji' bindtap='select_position'></image>
+  </view>
+  <view class='person_data_content flex_between'>
+    <view class='person_data_contentt flex'>
+      <view class='count_content'>
+        <text class='person_count_name'>城市</text>
+      </view>
+      <view class='input_content'>
+        <input type='text' placeholder='济南' placeholder-class='person_count' class='input' bindinput='city'></input>
+      </view>
+
+    </view>
+
+  </view>
+  <view class='person_data_content flex_between'>
+    <view class='person_data_contentt flex'>
+      <view class='count_content'>
+        <text class='person_count_name'>收货地址</text>
+      </view>
+
+      <view class='input_content'>
+        <input type='text' placeholder='连城广场' value='{{address}}' placeholder-class='person_count' class='input' bindinput='address_value'></input>
+      </view>
+
+    </view>
+    <image src='../../images/icon_bianji.png' class='bianji' bindtap='select_address'></image>
+  </view>
+</view>
+<view class='btn_save center' bindtap='save_'>
+  <text>保存</text>
+</view>
+ <view hidden='{{hidden}}' class="canyin">
+  <picker_list canyin='{{listData}}' titles="{{types}}" bind:myevent="getcanyin" tap="{{tap}}" bind:hiddenTab="dialog"></picker_list>
+</view>
+

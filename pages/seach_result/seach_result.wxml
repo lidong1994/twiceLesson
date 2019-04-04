@@ -1,0 +1,21 @@
+ <view class="all_lesson" wx:for="{{lesson}}" bindtap='lesson_details'>
+      <view class='all_lesson_content'>
+        <view class='flexs'>
+          <view class='flex_all_img'>
+            <image src='{{item.images}}'></image>
+          </view>
+          <view class='flex_all_txet'>
+            <view class='all_lesson_title'>{{item.title}}</view>
+            <view class='all_lesson_title_p'>
+              <text class='all_lesson_name'>{{item.name}}</text>
+              <text class='all_lesson_position'>{{item.position}}</text>
+            </view>
+            <view class='all_lesson_time'>
+              <text class='all_lesson_dom'>{{item.time}}分钟/节</text>
+              <text class='all_lesson_people'>{{item.people}}人已学</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      
+    </view>

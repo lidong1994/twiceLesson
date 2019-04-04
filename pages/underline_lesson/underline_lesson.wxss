@@ -1,0 +1,71 @@
+/* pages/underline_lesson/underline_lesson.wxss */
+page{
+  background: #FCFCFC;
+}
+.u_l_l_time{
+  height: 63rpx;
+  width:100%;
+}
+.dish{
+  width: 30rpx;
+  height: 30rpx;
+  background: #A3A1A1;
+  border-radius: 50%;
+}
+.u_l_l_c{
+  padding: 30rpx;
+}
+.data_time{
+  padding-left: 20rpx;
+  letter-spacing: 2px;
+}
+.u_banner_c{
+  height:366rpx;
+  width: 100%;
+  margin-top: 20rpx;
+}
+.u_banner_top{
+  height: 266rpx;
+  background-repeat: no-repeat;
+  background-size: 100% 266rpx;
+}
+.u_banner_bottom{
+  height: 100rpx;
+  background: #fff;
+  border-radius:0 0 20rpx 20rpx;
+}
+.address image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.city{
+  color: #999999;
+  padding-left: 10rpx;
+  padding-right: 20rpx;
+}
+.u_t{
+  font-size: 37rpx;
+  color: #333333;
+  font-weight: bold;
+  padding-left: 20rpx;
+}
+.baoming_s image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.hot_baoming{
+  color: #fff;
+}
+.baoming{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 2%;
+}
+.baoming_s{
+  width: 264rpx;
+  height: 68rpx;
+  line-height: 68rpx;
+  background: #FF8342;
+  border-radius: 0 0 10rpx 10rpx;
+  text-align: center;
+}

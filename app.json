@@ -1,0 +1,59 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/phone_login/phone_login",
+    "pages/logs/logs",
+    "pages/login_code/login_code",
+    "pages/lesson/lesson",
+    "pages/my/my",
+    "pages/operation_tools/operation_tools",
+    "pages/catering_course/catering_course",
+    "pages/lesson_details/lesson_details",
+    "pages/tools_details/tools_details",
+    "pages/underline_lesson/underline_lesson",
+    "pages/underline_lesson_details/underline_lesson_details",
+    "pages/sign_up_message/sign_up_message",
+    "pages/special/special",
+    "pages/special_details/special_details",
+    "pages/personal_data/personal_data",
+    "componerts/picker/picker",
+    "pages/my_love/my_love",
+    "pages/my_postcard/my_postcard",
+    "pages/voucher_center/voucher_center",
+    "pages/transaction_details/transaction_details",
+    "pages/my_replacement/my_replacement",
+    "componerts/dialog/dialog",
+    "pages/my_tool/my_tool",
+    "pages/member_center/member_center",
+    "pages/common_problem/common_problem",
+    "pages/seach/seach",
+    "pages/seach_result/seach_result"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home1.png"
+      },
+      {
+        "pagePath": "pages/lesson/lesson",
+        "text": "学习规划",
+        "iconPath": "images/lesson.png",
+        "selectedIconPath": "images/lesson1.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my1.png"
+      }
+    ]
+  }
+}

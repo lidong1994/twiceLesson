@@ -1,0 +1,64 @@
+.banner{
+ height: 400rpx;
+  width: 100%;
+}
+
+.special_lesson_item_xumu,.special_lesson_item_t{
+  font-size: 30rpx;
+  color: #333333;
+}
+.special_lesson_item_xumu{
+  padding: 0 50rpx 0 50rpx;
+}
+.special_lesson_item_time{
+  font-size: 28rpx;
+  color: #999999;
+  padding-right: 20rpx;
+}
+.special_lesson_item_title text{
+  padding-left: 30rpx;
+}
+.special_lesson_item_title{
+  margin-top: 50rpx;
+}
+.special_lesson_item_list{
+  margin-top: 30rpx;
+}
+.special_c{
+  margin-top: 20rpx;
+}
+.btn{
+  width: 100%;
+  position: absolute;
+  bottom:4%; 
+}
+
+.btn_open{
+  background: #ffb924;
+}
+.btn_opens{
+background: #ff7f24;
+}
+.b_c{
+   width: 300rpx;
+  height: 75rpx;
+   text-align: center;
+   border-radius: 10rpx;
+   color: #fff;
+   line-height: 75rpx;
+   display: flex;
+   align-items: center;
+   justify-content: center;             
+}
+.btn{
+  margin-bottom: 30rpx;
+}
+.btn_open image,.btn_opens image{
+  width: 33rpx;
+  height: 32rpx;
+  padding: 10rpx;
+
+}
+.vip{
+  font-size: 28rpx;
+}

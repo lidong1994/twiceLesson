@@ -1,0 +1,17 @@
+<view class="con">
+  <view class="ys-mask"></view>
+  <view class='ys-dialog'>
+    <view class='dialog_content'>
+      <text>使用规则</text>
+    </view>
+    <view class='youhuiquan'>
+      <view>1.优惠券是开餐课堂为了回馈客户，发到用户账户中，可抵同面金额的券</view>
+      <view>2.优惠券是开餐课堂为了回馈客户，发到用户账户中，可抵同面金额的券</view>
+      <view>3.优惠券是开餐课堂为了回馈客户，发到用户账户中，可抵同面金额的券</view>
+      <view>4.优惠券是开餐课堂为了回馈客户，发到用户账户中，可抵同面金额的券</view>
+      <view>5.优惠券是开餐课堂为了回馈客户，发到用户账户中，可抵同面金额的券</view>
+    </view>
+         <image src='../../images/X.png' class='x' bindtap='cel'></image>
+  </view>
+
+</view>

@@ -1,0 +1,56 @@
+.my_replacement {
+  width: 100%;
+}
+
+.my_replacement_content {
+  width: 90%;
+  margin: auto;
+}
+
+.my_replacement_c {
+  width: 100%;
+  border: 1px solid #ff8342;
+  border-radius: 10rpx;
+  height: 227rpx;
+}
+.my_replacement_c_img image{
+  width: 146rpx;
+  height: 146rpx;
+  padding-top: 27rpx;
+}
+.my_replacement_c_img{
+border-right: 1px dashed #CACACA;
+width:208rpx;
+height:205rpx;
+text-align:center;
+}
+.my_replacement_ss text{
+  color: #999999;
+  font-size: 26rpx;
+}
+.l{
+  padding: 20rpx;
+}
+.huangou_time{
+  font-size: 24rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 10rpx;
+  background: #FFF5F0;
+  margin-top: 20rpx;
+}
+.huangou_details{
+  width: 80rpx;
+  height: 227rpx;
+  writing-mode:tb-rl;
+  text-align: center;
+  line-height: 80rpx;
+  background: #ff8325;
+  color: #fff;
+  font-size: 32rpx;
+}
+.my_rep_lesson_title{
+  font-size: 28rpx;
+  color: #333333;
+}

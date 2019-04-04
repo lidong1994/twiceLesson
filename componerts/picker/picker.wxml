@@ -1,0 +1,19 @@
+<view class="con">
+  <view class="ys-mask"></view>
+  <view class='ys-dialog'>
+    <view class='picker_cons center'>
+      <view class='picker_title'>
+        <text>{{titles}}</text>
+      </view>
+      <scroll-view scroll-y="true" style='height:400rpx;'>
+        <view class='picker_list {{idx==index ? "active" : ""}}' wx:for="{{canyin}}" bindtap='select' wx:for-index="idx" data-name="{{item.name}}" data-id="{{idx}}" data-ids="{{tap}}">
+          {{item.name}}
+        </view>
+      </scroll-view>
+    </view>
+    <view class='picker_title_bottom' bindtap='quxiao'>
+      <text>取消</text>
+    </view>
+  </view>
+
+</view>

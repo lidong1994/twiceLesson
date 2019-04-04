@@ -1,0 +1,29 @@
+.my_love{
+  width: 100%;
+}
+.my_love_content{
+  width: 98%;
+  margin: auto;
+  border-bottom: 1px solid #EFEFEF;
+  height: 90rpx;
+  margin-top: 20rpx;
+}
+.my_love_image{
+  width:80%; 
+}
+.my_love_image image{
+  width:56rpx;
+  height: 56rpx;
+  padding: 0 30rpx 0 30rpx;
+}
+.my_love_text{
+  color: #323232;
+  font-size: 32rpx;
+  display: inline-block;
+  width: 60%;
+}
+.my_love_time{
+  font-size: 30rpx;
+  color: #999999;
+  padding-right: 20rpx;
+}

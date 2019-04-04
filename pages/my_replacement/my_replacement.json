@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+      "dialog": "../../../componerts/dialog/dialog"
+  },
+  "navigationBarTitleText": "我的换购"
+  
+}

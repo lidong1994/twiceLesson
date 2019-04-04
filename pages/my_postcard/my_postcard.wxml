@@ -1,0 +1,87 @@
+<view class="my_postcard">
+  <view class='my_postcard_content' style='background-image:url(../../images/bg_title.png)'>
+    <view class='my_postcard_rules'>规则</view>
+    <view class='my_postcard_c shadow'>
+      <view class='flex_around my_line'>
+        <view class='my_post_c_t'>
+          <image src='../../images/icon_ye.png'></image>
+          <view class='my_post_money'>100</view>
+          <view class='my_post_yy'>余额（K币）</view>
+        </view>
+        <view class='my_post_c_t'>
+          <image src='../../images/icon_sr.png'></image>
+          <view class='my_post_money'>12</view>
+          <view class='my_post_yy'>我的收入（K币）</view>
+        </view>
+        <view class='my_post_c_t'>
+          <image src='../../images/icon_jf.png'></image>
+          <view class='my_post_money'>2</view>
+          <view class='my_post_yy'>我的积分</view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <view class='my_post_cards'>
+    <view class='my_post_fg flex_around'>
+      <view class='my_post_cards_t flex' bindtap='transaction_details'>
+        <image src='../../images/icon_jiaoyimingxi.png'></image>
+        <text>交易明细</text>
+      </view>
+      <view class='my_post_cards_t flex' bindtap='my_replace'>
+        <image src='../../images/icon_huangou.png'></image>
+        <text>我的换购</text>
+      </view>
+      <view class='my_post_cards_t flex'  bindtap='yue'>
+        <image src='../../images/icon_chongzhi.png'></image>
+        <text>充值</text>
+      </view>
+    </view>
+  </view>
+
+  <view class='my_postcard_lucy'>
+
+    <view class='my_postcard_luck_cotent'>
+      <view class='my_postcard_luck_c_c flex_around'>
+        <image src='../../images/img_shipin.png' class='luck_c_c_img'></image>
+        <view class='my_postcard_luck_text'>
+          <view class='my_postcard_luck_title'>
+            <text>10元视频课程优惠券</text>
+          </view>
+          <view class='my_post_card_jifen'>
+            <text class='my_post_card_t_f'>200积分</text>
+            <text class='my_l'>|</text>
+            <text>市场价值￥30</text>
+          </view>
+
+        </view>
+        <view class='duihuan'>兑换</view>
+      </view>
+
+
+    </view>
+
+     <view class='my_postcard_luck_cotent'>
+      <view class='my_postcard_luck_c_c flex_around'>
+        <image src='../../images/img_huiyuan.png' class='luck_c_c_img'></image>
+        <view class='my_postcard_luck_text'>
+          <view class='my_postcard_luck_title'>
+            <text>10元视频课程优惠券</text>
+          </view>
+          <view class='my_post_card_jifen'>
+            <text class='my_post_card_t_f'>200积分</text>
+            <text class='my_l'>|</text>
+            <text>市场价值￥30</text>
+          </view>
+
+        </view>
+        <view class='duihuan'>兑换</view>
+      </view>
+
+
+    </view>
+
+
+  </view>
+
+</view>

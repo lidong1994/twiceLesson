@@ -1,0 +1,35 @@
+<view class="code_input">
+  <view class='code_input_header'>
+    <view class='login_title'>
+      <text>输入验证码</text>
+    </view>
+    <view class='login_phone'>
+      <text class='send_text'>已发送验证码至  +86</text>
+      <view class='code_number'>
+        <text>{{phone_one}}</text>
+        <text>{{phone_two}}</text>
+        <text>{{phone_three}}</text>
+      </view>
+
+    </view>
+  </view>
+  
+<form bindsubmit="formSubmit">
+  <view class='content'>
+    <block wx:for="{{Length}}" wx:key="item">
+      <input class='iptbox' value="{{Value.length>=index+1?Value[index]:''}}" disabled password='{{ispassword}}' catchtap='Tap' bindinput="inputValue" data-id="{{item}}"></input>
+    </block>
+  </view>
+  <input name="password" password="{{true}}" class='ipt' maxlength="{{Length}}" focus="{{isFocus}}" bindinput="Focus"></input>
+ 
+  <view>
+    <button class="login_get {{btns==true?'activeClass':''}}" formType="submit">确定</button>
+    <view class='send_code center'><button disabled='{{dis}}' bindtap='sendMsg'>重新发送验证码</button><text hidden="{{alreadySend}}">{{(second+"s")}}</text></view>
+  </view>
+ 
+</form>
+</view>
+
+
+
+ 

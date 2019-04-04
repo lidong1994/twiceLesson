@@ -1,0 +1,25 @@
+<view class="contents">
+  <view class='my_top' style='background-image: url("../../images/top_bac.png")'>
+    <view class='my_top_user_img flex_between'>
+      <view class='flex po_re'>
+        <image src='../../images/user.png' class="usre_image"></image>
+        <image src='../../images/Vip.png' class='vip_img'></image>
+        <view class="uer_name">
+          <view class='user'>用户053102</view>
+          <view class='flex center po_re'>
+            <image src='../../images/img_dengji.png' class='dengji'></image>
+            <text class='my_student'>学徒</text>
+          </view>
+        </view>
+      </view>
+      <image src='../../images/right.png' class='right'></image>
+    </view>
+  </view>
+</view>
+<view class='my_list'>
+  <view class='my_list_l flex' wx:for="{{list}}" data-tab="{{item.path}}" bindtap='my_bat'>
+  <image src='{{item.image}}' class='my_list__img'></image>
+  <text class='my_list_t'>{{item.text}}</text>
+  </view>
+</view>
+<view class='out_login'><text>退出账号</text></view>

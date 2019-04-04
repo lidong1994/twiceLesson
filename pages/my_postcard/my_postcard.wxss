@@ -1,0 +1,97 @@
+.my_postcard{
+  width: 100%;
+}
+.my_postcard_content{
+  width: 100%;
+  height: 332rpx;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.my_postcard_rules{
+  text-align: right;
+  font-size: 32rpx;
+  color: #333333;
+  padding: 30rpx;
+
+}
+.my_postcard_c{
+  width: 90%;
+  background: #fff;
+  margin: auto;
+  height: 300rpx;
+  border-radius: 20rpx;
+}
+.my_post_c_t image{
+  width: 65rpx;
+  height: 65rpx;
+  padding-top: 30rpx;
+}
+.my_post_c_t{
+  text-align: center;
+}
+.my_post_yy{
+  font-size: 32rpx;
+  color: #666666;
+}
+.my_line{
+  line-height: 72rpx;
+}
+.my_post_cards_t image{
+  width: 60rpx;
+  height: 60rpx;
+  padding: 10rpx;
+}
+.my_post_cards{
+  height: 130rpx;
+  margin-top: 110rpx;
+  line-height: 130rpx;
+  border-top: 30rpx solid #F5F5F5;
+    border-bottom: 30rpx solid #F5F5F5;
+}
+.my_post_cards_t text{
+  font-size: 32rpx;
+  color: #333333;
+}
+.luck_c_c_img{
+  width: 150rpx;
+  height: 150rpx;
+}
+.my_postcard_luck_title text{
+  font-size: 38rpx;
+  color: #333333;
+}
+.my_postcard_lucy{
+  width: 100%;
+}
+.my_postcard_luck_cotent{
+  width: 95%;
+  margin: auto;
+  background: #fff;
+  height: 200rpx;
+  box-shadow:0 5px 35px #e8e8e8;
+  border-radius: 10rpx;
+  margin-top: 30rpx;
+  
+}
+.my_postcard_luck_c_c{
+   height: 200rpx;
+}
+.my_post_card_jifen text{
+  font-size: 30rpx;
+  color: #999999;
+}
+.my_l{
+  padding: 20rpx;
+}
+.duihuan{
+width:130rpx;
+height:50rpx;
+background:#ff8342;
+color:#fff;
+font-size:30rpx;
+text-align:center;
+line-height:50rpx;
+border-radius:20rpx;
+margin-top:51rpx;
+
+}

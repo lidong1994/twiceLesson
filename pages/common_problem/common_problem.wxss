@@ -1,0 +1,23 @@
+.problem_content{
+  width: 90%;
+  margin: auto;
+  height: 85rpx;
+  border-bottom: 1px solid #EFEFEF;
+  margin-top: 40rpx;
+}
+
+.pro_desh{
+  width: 25rpx;
+  height: 25rpx;
+  border-radius: 50%;
+  background: #ff8342;
+}
+.problem_content_right{
+width: 45rpx;
+height: 45rpx;
+}
+.problem_text{
+  font-size: 38rpx;
+  color: #323232;
+  padding-left: 18rpx;
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "picker_list": "../../../componerts/picker/picker"
+  },
+  "navigationBarTitleText": "个人资料"
+}

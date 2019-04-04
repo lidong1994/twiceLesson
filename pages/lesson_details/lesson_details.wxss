@@ -1,0 +1,115 @@
+@import "../index/index.wxss";
+page {
+  background: #fff;
+}
+.swiper-tab{
+  background: #ffffff;
+}
+.lesson_details_vedio{
+  width: 100%;
+  height: 430rpx;
+}
+#myVideo1 {
+  height: 430rpx;
+  width: 100%;
+
+}
+.scroll-header {
+
+padding:20rpx 0 0 12rpx;
+
+
+}
+.index_lesson_more_lefts {
+margin-left:5%;
+
+}
+.index_lesson_more_lefts image,.index_lesson_more_rights image{
+  width: 323rpx;
+}
+.index_lesson_ii {
+padding:40rpx 0 0 0;
+
+
+}
+
+.index_jingxuan_left{
+padding:20rpx 0 0 12rpx;
+
+}
+.index_youxuan{
+  margin-top: 30rpx;
+  border-top:10px solid #F5F5F5;
+
+}
+.lesson_details_vedio image{
+  width: 32rpx;
+  height: 50rpx;
+    position: absolute;
+  top: 4%;
+  right: 5%;
+}
+.active{
+  font-weight: 600;
+}
+.lesson_list_title{
+  padding: 45rpx;
+}
+.lesson_list_t_t{
+  padding: 0 32rpx 50rpx 60rpx;
+  font-size: 30rpx;
+}
+.lesson_list_title image{
+width: 52rpx;
+height: 56rpx;
+}
+.lesson_title_t,.lesson_content_c{
+  padding-left: 32rpx;
+}
+.tabctive{
+  color:#ff8432;
+}
+.lesson_list{
+  background: #ffffff;
+}
+.btn{
+  width: 100%;
+  position: absolute;
+  bottom:4%; 
+}
+
+.btn_open{
+  background: #ffb924;
+}
+.btn_opens{
+background: #ff7f24;
+}
+.b_c{
+   width: 300rpx;
+  height: 75rpx;
+   text-align: center;
+   border-radius: 10rpx;
+   color: #fff;
+   line-height: 75rpx;
+}
+.yixue{
+  color: #7C7C7C;
+  padding-left: 16%;
+  font-size: 32rpx;
+}
+.lesson_love image{
+   width: 50rpx;
+   height: 50rpx;
+}
+.lesson_love{
+  display: flex;
+  align-items: center;
+}
+.jianjie{
+  width: 90%;
+  margin: auto;
+}
+.jianjie image{
+  width: 100%;
+
+}

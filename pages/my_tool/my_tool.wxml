@@ -1,0 +1,21 @@
+<view class="my_tool">
+  <view class='my_tool_content' wx:for="{{list}}">
+    <view class='my_tool_con'>
+      <view class='flexs'>
+        <image src='{{item.image}}'></image>
+        <view class='my_tool_title'>
+          <view class='my_tool_title_text ell'>{{item.title}}</view>
+          <view class='my_d'>
+            <text class='my_tool_title_ss' wx:for="{{item.text}}" wx:for-item="v">{{v.text}}</text>
+          </view>
+          <view class='my_tood_btn'>
+            <button class='send my_tools_look' bindtap='tools_details'>查看</button>
+            <button class='send' open-type="share">发送</button>
+          </view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+
+</view>

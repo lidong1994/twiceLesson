@@ -1,0 +1,132 @@
+@import "../index/index.wxss";
+
+page{
+  background: #FCFCFC;
+}
+.underline_img image{
+  width: 100%;
+}
+.con{
+  background: #fff;
+}
+.underline_img{
+  width: 100%;
+}
+.under_title_b{
+  padding-left: 20rpx;
+  padding-top: 30rpx;
+}
+.name,under_title{
+    padding-left: 22rpx;
+    margin-top: 30rpx;
+  border-top: 1px solid #EDEDED;
+  border-bottom: 1px solid #EDEDED;
+  height: 80rpx;
+  line-height: 50rpx;
+  padding-top: 30rpx;
+}
+.under_title_b image{
+    width: 40rpx;
+  height: 42rpx;
+}
+.lesson_under_time{
+  color: #A3A3A3;
+}
+.hot_baoming{
+  color: #ff8342;
+}
+.hot_baoming{
+  padding-left: 10rpx;
+}
+.yujian{
+  color: #333333;
+  font-weight: 800;
+}
+.name text{
+  color: #666666;
+  font-size: 32rpx;
+}
+.ttt{
+  padding-left: 30rpx;
+}
+.address image{
+    width: 40rpx;
+  height: 42rpx;
+}
+.address{
+  border-top: 1px solid #EDEDED; 
+    padding-left: 20rpx;
+margin-top: 30rpx;
+height: 80rpx;
+line-height: 80rpx;
+}
+.instro{
+  border-top: 10rpx #333333
+}
+.instro{
+  width: 100%;
+  margin-top: 40rpx;
+
+}
+.instro_img{
+
+margin: auto;
+  width: 90%;
+  background: #fff;
+  text-align: center;
+}
+.btn{
+  width: 100%;
+  position: absolute;
+  bottom:4%; 
+}
+
+.btn_open{
+  background: #ffb924;
+}
+.btn_opens{
+background: #ff7f24;
+}
+.b_c{
+   width: 300rpx;
+  height: 75rpx;
+   text-align: center;
+   border-radius: 10rpx;
+   color: #fff;
+   line-height: 75rpx;
+   display: flex;
+   align-items: center;
+   justify-content: center;             
+}
+.index_youxuan {
+  margin-top: 30rpx;
+}
+.index_lesson_more{
+  margin-top: 30rpx;
+}
+.index_lesson_teacer{
+  width: 90%;
+  color:#999;
+padding-top:16rpx;
+font-size:24rpx;
+
+}
+.index_lesson_more_lefts {
+  width: 44%;
+}
+.uu{
+  width: 94%;
+  text-align: center;
+}
+.btn{
+  margin-bottom: 30rpx;
+}
+.btn_open image,.btn_opens image{
+  width: 33rpx;
+  height: 32rpx;
+  padding: 10rpx;
+
+}
+.vip{
+  font-size: 28rpx;
+}

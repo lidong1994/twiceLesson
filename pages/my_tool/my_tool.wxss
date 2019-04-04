@@ -1,0 +1,62 @@
+.flexs image{
+  width: 40%;
+  height: 150rpx;
+}
+.my_tool{
+  width: 100%;
+}
+.my_tool_title_text{
+  width:85%;
+    font-size: 32rpx;
+    padding-left: 40rpx;
+    color: #333333;
+}
+.my_tool_con{
+  width: 90%;
+  margin: auto;
+}
+.my_tool_title{
+  width: 70%;
+}
+.my_tool_title text{
+  font-size: 32rpx;
+  color: #A7A7A7;
+  padding: 10rpx;
+}
+.my_d :first-child{
+ padding-left: 40rpx;
+}
+my_tool_title_ss{
+  padding: 20rpx;
+}
+
+.send{
+width:105rpx;
+height:48rpx;
+line-height:48rpx;
+background:#ff8432;
+color:#fff;
+display:inline-block;
+border-radius:40rpx;
+font-size:24rpx;
+
+
+}
+.my_tood_btn{
+  text-align: right;
+}
+.my_tools_look{
+margin-right: 30rpx;
+}
+.my_tool_content{
+  width: 100%;
+  margin-top: 40rpx;
+  border-top: 20rpx solid #F5F5F5;
+}
+.my_tool :nth-child(1){
+  margin-top: 8rpx;
+  border-top: none;
+}
+.my_tool_content{
+  margin-top: 40rpx;
+}

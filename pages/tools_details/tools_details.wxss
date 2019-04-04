@@ -1,0 +1,65 @@
+@import '../lesson/lesson.wxss';
+.tools_d_header{
+  width: 100%;
+  height: 500rpx;
+  margin-top: 50rpx;
+}
+.tools_d_header image{
+  width:100%;
+    height: 500rpx;
+}
+.tools_header_title{
+width: 100%;
+margin-top: 32rpx;
+
+}
+.tools_header_title_pd{
+  padding: 32rpx;
+}
+.tools_header_name{
+  font-size: 48rpx;
+  color: #333333;
+}
+.tools_header_price{
+  margin-top: 30rpx;
+}
+.tools_header_price_vip_,.tools_header_price_vip{
+  color: #ff000d;
+}
+.tools_header_price_vip{
+  font-size: 42rpx;
+}
+.tools_header_price_vip_{
+  padding-left: 10rpx;
+}
+  .tools_header_price_place{
+  padding-left: 20rpx;
+font-size: 38rpx;
+}
+.tools_header_price_place{
+  font-size: 30rpx;
+  color: #999999;
+}
+.come_buy{
+  width: 160rpx;
+  height: 50rpx;
+  background: #FF7418;
+  color: #fff;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 50rpx;
+  border-radius: 20rpx;
+  
+}
+.share_love image{
+
+  width: 54rpx;
+  height: 52rpx;
+}
+.study_lesson{
+  margin-bottom: 84rpx;
+  border-top: 20rpx solid #F5F5F5;
+}
+.study_c_left {
+  padding: 0;
+}

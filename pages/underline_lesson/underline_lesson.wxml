@@ -1,0 +1,28 @@
+<view class="u_l_lesson contents">
+  <view class='u_l_l_c' wx:for="{{list}}">
+    <view class='u_l_l_time flex'>
+      <view class='dish'></view>
+      <view class='data_time'>{{item.time}}</view>
+    </view>
+    <view class='u_banner_c'>
+      <view class='u_banner_top' style='background-image:url({{item.bac}})'>
+        <view class='baoming'>
+          <view class='baoming_s'>
+            <image src='../../images/hot.png'></image>
+            <text class='hot_baoming'>火热报名中</text>
+          </view>
+        </view>
+      </view>
+      <view class='u_banner_bottom flex_between'>
+        <view class='u_t'>{{item.title}}</view>
+        <view class='address'>
+          <image src='../../images/address.png'></image>
+          <text class='city'>{{item.address}}</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+</view>

@@ -1,0 +1,33 @@
+
+.index_lesson_time {
+  color: #999;
+  padding-top: 16rpx;
+  font-size: 24rpx;
+}
+.study_c_left_img{
+  width: 330rpx;
+  height: 193rpx;
+  border-radius: 20rpx;
+}
+.study_lesson{
+  width: 100%;
+}
+.study_lesson_c{
+  width: 100%;
+}
+
+.study_c_left{
+width: 44%;
+margin-left: 4%;
+float: left;
+padding-top:40rpx;
+
+}
+.flex_warp{
+  clear:both;
+  overflow: hidden;
+  padding-top: 10rpx;
+}
+.study_c_title{
+  font-size: 32rpx;
+}

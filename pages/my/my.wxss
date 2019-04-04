@@ -1,0 +1,89 @@
+.usre_image{
+  width: 180rpx;
+  height: 180rpx;
+  padding-left: 30rpx;
+}
+page{
+  background: #f5f5f5;
+}
+.my_top{
+ height: 480rpx;
+ background-repeat: no-repeat;
+ background-size: 100% 100%;
+}
+.my_top_user_img{
+ padding-top: 80rpx;
+}
+.vip_img{
+  width: 52rpx;
+  height: 52rpx;
+  position: absolute;
+left:34%;
+top:63%;
+
+
+}
+.user{
+  margin-bottom: 30rpx;
+  margin-left: 20rpx;
+  font-weight: 800;
+}
+.my_student{
+  display: inline-block;
+  width: 160rpx;
+  height: 60rpx;
+  background: #FEDBAE;
+  line-height: 60rpx;
+color: #8D8377;
+border-radius: 20px;
+position: absolute;
+left: 21%;
+}
+.right{
+  height: 50rpx;
+  width: 30rpx;
+  padding-right: 30rpx;
+}
+.dengji{
+  width: 90rpx;
+  height: 90rpx;
+  position: relative;
+  z-index: 100;
+
+}
+.uer_name{
+  padding-left: 60rpx;
+}
+.my_list__img{
+  width: 50rpx;
+  height: 50rpx;
+  padding: 0 30rpx 0 30rpx;
+}
+.my_list_t{
+  font-size: 32rpx;
+  color: #333333;
+}
+.my_list_l{
+  height: 110rpx;
+  border-bottom: 1px solid #EAEAEA;
+}
+.my_list :last-child{
+  border: none;
+}
+.my_list{
+  background: #fff;
+}
+.out_login{
+  height: 100rpx;
+  width: 100%;
+  background: #fff;
+  text-align: center;
+  margin-top: 30rpx;
+  line-height: 100rpx;
+  margin-bottom: 120rpx;
+
+}
+.out_login text{
+  font-size: 40rpx;
+  color: #ff8342;
+}

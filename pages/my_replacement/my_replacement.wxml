@@ -1,0 +1,22 @@
+<view class='my_replacement'>
+  <view class='my_replacement_content'>
+    <view class='my_replacement_c flex_between'>
+      <view class='my_replacement_c_img'>
+        <image src='../../images/img_shipin.png'></image>
+      </view>
+      <view class='my_replacement_c_title'>
+        <view class='my_rep_lesson_title'>10元课程优惠券</view>
+        <view class='my_replacement_ss'>
+          <text>200积分</text>
+          <text class='l'>|</text>
+          <text>市场价值￥30</text>
+        </view>
+        <view class='huangou_time'>
+          <text>换购时间：2018-11-11</text>
+        </view>
+      </view>
+      <view class='huangou_details' bindtap='replaceBuy'>换购详情</view>
+    </view>
+  </view>
+</view>
+<view hidden='{{hidden}}'><dialog  bind:cancel="cancel"></dialog></view>

@@ -1,0 +1,14 @@
+<view class="contents">
+  <view class='problem_content' wx:for="{{list}}">
+    <view class='flex_between'>
+      <view class='content_left flex'>
+        <view class='pro_desh'></view>
+        <view class='problem_text'>{{item.title}}</view>
+      </view>
+      <image src='../../images/right.png' class='problem_content_right' mode='aspectFit'></image>
+
+    </view>
+
+  </view>
+
+</view>

@@ -1,0 +1,213 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.2",
+	"appid": "wxdc153d18037a7a20",
+	"projectname": "KaicanLesson",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 24,
+			"list": [
+				{
+					"id": -1,
+					"name": "发送验证码",
+					"pathName": "pages/login_code/login_code",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "学习规划",
+					"pathName": "pages/lesson/lesson",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "运营工具",
+					"pathName": "pages/operation_tools/operation_tools",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "全部课程",
+					"pathName": "pages/catering_course/catering_course",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "课程详情",
+					"pathName": "pages/lesson_details/lesson_details",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "工具详情",
+					"pathName": "pages/tools_details/tools_details",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "线下课程",
+					"pathName": "pages/underline_lesson/underline_lesson",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "线下课程详情",
+					"pathName": "pages/underline_lesson_details/underline_lesson_details",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "报名信息",
+					"pathName": "pages/sign_up_message/sign_up_message",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "系列专题",
+					"pathName": "pages/special/special",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "专题详情",
+					"pathName": "pages/special_details/special_details",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/my/my",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "个人资料",
+					"pathName": "pages/personal_data/personal_data",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的收藏",
+					"pathName": "pages/my_love/my_love",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的钱包",
+					"pathName": "pages/my_postcard/my_postcard",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "充值中心",
+					"pathName": "pages/voucher_center/voucher_center",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "交易明细",
+					"pathName": "pages/transaction_details/transaction_details",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的换购",
+					"pathName": "pages/my_replacement/my_replacement",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "我的工具",
+					"pathName": "pages/my_tool/my_tool",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "会员中心",
+					"pathName": "pages/member_center/member_center",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "常见问题",
+					"pathName": "pages/common_problem/common_problem",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "搜索",
+					"pathName": "pages/seach/seach",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 22,
+					"name": "搜索结果",
+					"pathName": "pages/seach_result/seach_result",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 23,
+					"name": "获取验证码",
+					"pathName": "pages/login_code/login_code",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "登录 ",
+					"pathName": "pages/phone_login/phone_login",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

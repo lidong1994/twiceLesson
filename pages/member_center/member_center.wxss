@@ -1,0 +1,129 @@
+@import '../../pages/my/my.wxss';
+page{
+  background: #fff;
+}
+.member_over{
+  font-size: 25rpx;
+  color: #999999;
+  position: absolute;
+  left: 86%;
+  width: 294rpx;
+}
+.uer_name {
+  padding-left: 40rpx;
+}
+.member_tehui{
+  font-size: 38rpx;
+  color: #333333;
+}
+.index_jingxuan_title{
+  margin-top: 20rpx;
+}
+.member_vip_img{
+  width: 90%;
+  margin: auto;
+}
+.member_vip_img image{
+height:280rpx;
+width:100%;
+border-radius:20rpx;
+}
+
+.xufei{
+  width: 100%;
+  text-align: center;
+}
+.xufei_btn{
+display:inline-block;
+width:312rpx;
+height:88rpx;
+line-height:88rpx;
+margin-top:47rpx;
+background: #ff7f24;
+border-radius: 15rpx;
+color: #fff;
+}
+.ys-dialog {
+  position: fixed;
+  z-index: 5000;
+  width: 100%;
+  bottom: -25%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 10rpx;
+}
+.ys-mask {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.con{
+  width: 100%;
+}
+.member_vip{
+  height: 586rpx;
+  background: #fff;
+}
+.open_vip{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 32rpx;
+}
+.select_taocan{
+  text-align: left;
+  padding-left: 20rpx;
+  font-size: 32rpx;
+
+  
+}
+.taocan_text{
+    margin-top: 40rpx;
+}
+.taocan_text_s{
+  height: 215rpx;
+  border: 1px solid #CCCCCC;
+  width: 26%;
+  line-height: 70rpx;
+}
+.vip_title{
+  padding-top: 25rpx;
+  font-size: 32rpx;
+  color:#333333;
+}
+.vip_title_price{
+  color: #ff8432;
+  font-size: 42rpx;
+  font-weight: 800;
+
+}
+.jidu{
+  font-size: 32rpx;
+  color: #ff8432;
+}
+.vip_btn_{
+  width: 100%;
+}
+.vip_btn_ss{
+  width: 90%;
+  margin: auto;
+  background: #ff8432;
+  color: #fff;
+  height: 75rpx;
+  line-height: 75rpx;
+  border-radius: 40rpx;
+  margin-top:50rpx;
+
+}
+.active{
+  background: #fde6d6;
+  border: 1px solid #ff8432;
+}
+.sele_mean{
+  font-weight: 600;
+}
