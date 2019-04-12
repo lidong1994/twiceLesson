@@ -27,7 +27,11 @@
     "pages/member_center/member_center",
     "pages/common_problem/common_problem",
     "pages/seach/seach",
-    "pages/seach_result/seach_result"
+    "pages/seach_result/seach_result",
+    "componerts/loadding/loadding",
+    "pages/selected_lesson/selected_lesson",
+    "componerts/toast/toast",
+    "pages/wx_logon_phone/wx_logon_phone"
   ],
   "window": {
     "backgroundTextStyle": "light",

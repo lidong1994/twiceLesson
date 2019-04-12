@@ -49,7 +49,7 @@
     border-bottom: 30rpx solid #F5F5F5;
 }
 .my_post_cards_t text{
-  font-size: 32rpx;
+  font-size: 28rpx;
   color: #333333;
 }
 .luck_c_c_img{

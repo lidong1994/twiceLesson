@@ -1,5 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+        "loadding": "../../../componerts/loadding/loadding"
+  },
   "navigationBarTitleText": "开餐课堂",
   "navigationBarTextStyle": "black"
 }

@@ -1,20 +1,20 @@
 <view class="special_banner">
-  <image src='../../images/banner2.jpg' class='banner_image' style='width:100%;'></image>
+  <image src='{{image}}' class='banner_image' style='width:100%;'></image>
 </view>
 
 
 <view class='special_lesson_item' wx:for="{{list}}">
   <view class='special_lesson_item_title'>
-    <text>{{item.title}}</text>
+    <text>{{item.tag_name}}</text>
   </view>
-  <view class='special_lesson_item_list'>
-    <view class='flex_between special_c' wx:for="{{item.items}}" wx:for-item="i">
-      <view>
-        <text class='special_lesson_item_xumu'>{{i.num}}</text>
-        <text class='special_lesson_item_t'>{{i.text}}</text>
+  <view class='special_lesson_item_list' wx:for="{{item.lists}}" wx:for-item="i" bindtap='lesson_tab' data-id="{{i.sid}}">
+    <view class='flex_between special_c'>
+      <view class='muen_list ell'>
+        <text class='special_lesson_item_xumu' wx:if="{{index>10}}">{{index+1}}</text>
+        <text class='special_lesson_item_xumu' wx:else>0{{index+1}}</text>
+        <text class='special_lesson_item_t'>{{i.title}}</text>
       </view>
-
-      <text class='special_lesson_item_time'>{{i.time}}分钟</text>
+      <text class='special_lesson_item_time'>{{i.video_mins}}分钟</text>
     </view>
 
   </view>

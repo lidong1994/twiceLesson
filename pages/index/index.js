@@ -7,6 +7,7 @@ Page({
    */
   data: {
     countDownList: [],
+    loaddingHidden: true, //等待加载显示隐藏
     actEndTimeList: [],
     timeList: [],
     imgUrls: [], //轮播
@@ -19,39 +20,6 @@ Page({
     timeLimitSubjects: [], //免费课程时间
     timeLimitList: [],
     timeLimitList1: [],
-    lesson: [{
-
-        image: '../../images/jingxuan.jpg',
-        title: '建立餐厅数据分析的模型',
-        time: '25',
-        people: 88,
-        daojishi: '1554199200000'
-      },
-      {
-
-        image: '../../images/jingxuan.jpg',
-        title: '建立餐厅数据分析的模型',
-        time: '25',
-        people: 88,
-        daojishi: '1554899200000'
-      },
-      {
-
-        image: '../../images/jingxuan.jpg',
-        title: '建立餐厅数据分析的模型',
-        time: '25',
-        people: 88,
-        daojishi: '1558199200000'
-      },
-      {
-
-        image: '../../images/jingxuan.jpg',
-        title: '建立餐厅数据分析的模型安',
-        time: '25',
-        people: 88,
-        daojishi: '1554599200000'
-      }
-    ],
     indicatorDots: true,
     autoplay: true,
     interval: 3000,
@@ -63,6 +31,23 @@ Page({
    */
   onLoad: function(options) {
     this.getIndexInfo()
+  },
+  /**
+   * 轮播图跳转详情
+   */
+  banner_details(e) {
+    var type = e.currentTarget.dataset.type
+    var id = e.currentTarget.dataset.id
+    if (type == 1) {
+      wx.navigateTo({
+        url: '../../pages/lesson_details/lesson_details?id='+id,
+      })
+    }
+    if (type == 2) {
+      wx.navigateTo({
+        url: '../../pages/tools_details/tools_details?id='+id,
+      })
+    }
   },
   /**
    * 时间补0
@@ -79,10 +64,14 @@ Page({
    * 首页信息接口获取
    */
   getIndexInfo() {
+    this.setData({
+      loaddingHidden: false
+    })
     request.requestjSON(url.connect.baseURL + "/index", {
       page: 1,
       page_amount: 20
     }).then(res => {
+      console.log(res)
       if (res.result_code == 200) {
         let bannerList = []
         bannerList = res.data
@@ -136,8 +125,18 @@ Page({
 
           }
         })
-        console.log(res, '首页信息')
+        this.setData({
+          loaddingHidden: true
+        })
       }
+    })
+  },
+  /**
+   * 跳转搜索
+   */
+  seach() {
+    wx.navigateTo({
+      url: '../../pages/seach/seach',
     })
   },
   /**
@@ -193,7 +192,64 @@ Page({
     setTimeout(that.countDown, 1000);
 
   },
-
+  /**
+   * 线下更多
+   */
+  line_more() {
+    wx.navigateTo({
+      url: '../../pages/underline_lesson/underline_lesson',
+    })
+  },
+  /**
+   * 在线精选更多跳转
+   */
+  select_more() {
+    wx.navigateTo({
+      url: '../../pages/selected_lesson/selected_lesson?id=0',
+    })
+  },
+  /**
+   * 限免精选
+   */
+  free_more() {
+    wx.navigateTo({
+      url: '../../pages/selected_lesson/selected_lesson?id=1',
+    })
+  },
+  /**
+   * 限免精选跳转详情
+   */
+  free_details(e) {
+    var id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '../../pages/lesson_details/lesson_details?id=' + id,
+    })
+  },
+  /**
+   * 工具优选跳转详情
+   */
+  tools_details(e) {
+    var id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '../../pages/tools_details/tools_details?id=' + id,
+    })
+  },
+  /**
+   * 精选专题跳转更多
+   */
+  special_more() {
+    wx.navigateTo({
+      url: '../../pages/special/special',
+    })
+  },
+  /**
+   * 专题列表跳转详情
+   */
+  special_detials(e) {
+    wx.navigateTo({
+      url: '../../pages/lesson_details/lesson_details?id=' + e.currentTarget.dataset.id,
+    })
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
@@ -235,7 +291,25 @@ Page({
   onReachBottom: function() {
 
   },
-
+  /**
+   * 线下课程跳转详情
+   * 
+   */
+  online_down(e) {
+    var id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '../../pages/underline_lesson_details/underline_lesson_details?id=' + id
+    })
+  },
+  /**
+   * 在线精选跳转详情
+   */
+  online_details(e) {
+    var id = e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '../../pages/lesson_details/lesson_details?id=' + id
+    })
+  },
   /**
    * 用户点击右上角分享
    */
@@ -245,10 +319,22 @@ Page({
   /**
    * 运营工具跳转
    */
-  utils() {
-    wx.navigateTo({
-      url: '../../pages/operation_tools/operation_tools',
-    })
+  utils(e) {
+    var target = e.currentTarget.dataset.id
+    if (target === "subjects_list") {
+      wx.navigateTo({
+        url: '../../pages/catering_course/catering_course',
+      })
+      return
+    }
+    if (target === "tools_list") {
+      wx.navigateTo({
+        url: '../../pages/operation_tools/operation_tools',
+      })
+      return
+    }
+
+
   },
   catering() {
     wx.navigateTo({

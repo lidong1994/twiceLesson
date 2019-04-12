@@ -81,7 +81,7 @@ swiper {
 }
 
 .index_lesson_img_i {
-  height: 200rpx;
+  height: 255rpx;
   margin: 30rpx;
   width: 92%;
 }
@@ -148,8 +148,7 @@ swiper {
 }
 
 .index_lesson_more_lefts {
-  margin-left: 4%;
-  width: 47%;
+  width: 43%;
 }
 
 .index_lesson_title {

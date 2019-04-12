@@ -1,6 +1,6 @@
 <view class="underline_leson_details">
   <view class='underline_img'>
-    <image src='../../images/fengmian.jpg'></image>
+    <image src='{{list.small_img}}'></image>
   </view>
 
   <view class='con'>
@@ -8,48 +8,48 @@
       <view class='under_title_b flex'>
         <image src='../../images/icon-headline.png' mode='widthFix'></image>
         <text class='hot_baoming'>火热报名中</text>
-        <text class='yujian'>“预见.新餐饮”第一期</text>
+        <text class='yujian'>{{list.title}}</text>
       </view>
     </view>
     <view class='name'>
       <text class='kaican_lesson'>主办方：</text>
-      <text>开餐课堂</text>
+      <text>{{list.sponsor}}</text>
     </view>
     <view class='under_title'>
       <view class='under_title_b flex'>
         <image src='../../images/icon_shijian.png' mode='scaleToFill'></image>
-        <text class='lesson_under_time pl_20'>2018-12-18</text>
-        <text class='lesson_under_time ttt'>9:00-12:00</text>
+        <text class='lesson_under_time pl_20'>{{new_start}}</text>
+        <text class='lesson_under_time ttt'>{{end_start}}</text>
       </view>
     </view>
     <view class='address flex'>
       <image src='../../images/address.png' mode='scaleToFill'></image>
-      <text class='pl_20 lesson_under_time'>济南</text>
+      <text class='pl_20 lesson_under_time'>{{list.address}}</text>
     </view>
   </view>
   <view class='instro'>
     <view class='instro_img'>
-      <image src='../../images/11.26c4f4f.jpg' mode='widthFix'></image>
+      <image src='{{list.big_img}}' style='width:100%;' mode='widthFix'></image>
     </view>
 
   </view>
-  <view class='index_youxuan'>
+  <view class='index_youxuan' wx:if="{{tools.length}}">
     <view class='index_jingxuan_title'>
       <view class='index_jingxuan_left'></view>
       <view>关联工具</view>
     </view>
 
     <scroll-view class="scroll-header" scroll-x="true" style="width: 100%">
-      <image src='{{item}}' class='scroll_img' wx:for="{{jingxuan}}"></image>
+      <image src='{{item}}' class='scroll_img' wx:for="{{tools}}"></image>
     </scroll-view>
   </view>
-  <view class='index_lesson_more'>
+  <view class='index_lesson_more' wx:if="{{subjects.length}}">
     <view class='index_jingxuan_title'>
       <view class='index_jingxuan_left'></view>
       <view>课程推荐</view>
     </view>
-    <view class='flex index_lesson_ii' >
-      <view class='index_lesson_more_lefts' wx:for="{{list}}">
+    <view class='flex_around_warp index_lesson_ii' >
+      <view class='index_lesson_more_lefts' wx:for="{{subjects}}">
         <view class='uu'>
           <image src='{{item.images}}'></image>
           <view class='index_lesson_title'>
@@ -57,11 +57,11 @@
           </view>
           <view class='index_lesson_teacer ell'>
             <text>主讲老师：{{item.teacher}}</text>
-            <text class='index_lesson_num'>{{item.dec}}</text>
+            <text class='index_lesson_num'>{{item.desc}}</text>
           </view>
           <view class='index_lesson_time'>
-            <text>时长：{{item.time}}分钟/节</text>
-            <text class='index_lesson_num'>{{item.people}}人已学</text>
+            <text>时长：{{item.video_mins}}分钟/节</text>
+            <text class='index_lesson_num'>{{item.nums}}人已学</text>
           </view>
         </view>
 
@@ -71,7 +71,7 @@
   </view>
   <view class='btn'>
     <view class='flex_around btn_c'>
-      <view class='btn_open b_c'>
+      <view class='btn_open b_c' bindtap='baoming'>
       <image src='../../images/icon_baoming.png'></image>
         <text class='vip'>我要报名</text>
       </view>

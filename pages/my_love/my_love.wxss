@@ -9,7 +9,7 @@
   margin-top: 20rpx;
 }
 .my_love_image{
-  width:80%; 
+  width:65%; 
 }
 .my_love_image image{
   width:56rpx;
@@ -20,7 +20,7 @@
   color: #323232;
   font-size: 32rpx;
   display: inline-block;
-  width: 60%;
+  width: 80%;
 }
 .my_love_time{
   font-size: 30rpx;

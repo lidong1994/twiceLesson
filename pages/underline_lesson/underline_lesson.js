@@ -1,97 +1,89 @@
-// pages/underline_lesson/underline_lesson.js
+const request = require('/../../request/request.js')
+const url = require('/../../url/url.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-list:[{
-  bac:'../../images/bb.jpg',
-  time:"2019年1月10日-1月12日",
-  address:'济南',
-  datas:'第01期',
-  date_time:'1月7-9日',
-  title:'精准置顶2019年度计划',
-},
-  {
-    bac: '../../images/bb.jpg',
-    time: "2019年1月10日-1月12日",
-    address: '济南',
-    datas: '第01期',
-    date_time: '1月7-9日',
-    title: '精准置顶2019年度计划',
-  },
-  {
-    bac: '../../images/bb.jpg',
-    time: "2019年1月10日-1月12日",
-    address: '济南',
-    datas: '第01期',
-    date_time: '1月7-9日',
-    title: '精准置顶2019年度计划',
-  },
-  {
-    bac: '../../images/bb.jpg',
-    time: "2019年1月10日-1月12日",
-    address: '济南',
-    datas: '第01期',
-    date_time: '1月7-9日',
-    title: '精准置顶2019年度计划',
-  }]
+    list: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
-
+  onLoad: function(options) {
+    this.getLineLesson()
   },
 
   /**
+   * 获取线下课
+   */
+  getLineLesson() {
+    request.requestjSON(url.connect.baseURL + "/underline_list", {
+      page: 1,
+      page_amount: 20
+    }).then(res => {
+      this.setData({
+        list: res.data
+      })
+    })
+  },
+  /**
+   * 线下课跳转详情
+   */
+  line_btn(e){
+    var id=e.currentTarget.dataset.id
+    wx.navigateTo({
+      url: '../../pages/underline_lesson_details/underline_lesson_details?id='+id,
+    })
+  },
+  /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

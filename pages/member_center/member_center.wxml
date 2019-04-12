@@ -3,13 +3,13 @@
     <view class='my_top_user_img flex_between'>
       <view class='flex po_re'>
         <image src='../../images/user.png' class="usre_image"></image>
-        <image src='../../images/Vip.png' class='vip_img'></image>
+        <image src='../../images/Vip.png' class='vip_img' wx:if="{{item.is_vip==1}}"></image>
         <view class="uer_name">
           <view class='user'>用户053102</view>
           <view class='flex center po_re'>
             <image src='../../images/img_dengji.png' class='dengji'></image>
             <text class='my_student'>学徒</text>
-            <text class='member_over'>(会员到期日2019-12-31)</text>
+            <text class='member_over'>(会员到期日{{time}})</text>
           </view>
         </view>
       </view>
@@ -25,14 +25,14 @@
 </view>
 <view class='contents'>
   <view class='member_vip_img'>
-    <image src='../../images/fengmian.jpg'></image>
+    <image src='{{activity_images}}'></image>
   </view>
 </view>
 <view class='index_jingxuan_title flex'>
   <view class='index_jingxuan_left'></view>
   <view class='member_tehui'>用户权益</view>
 </view>
-
+<view class='instro'><image src='{{images}}' style='height:{{imgHeight}}rpx' bindload='imagesLoad'></image></view>
 
 
 <view class="con" hidden='{{hiddens}}' >
@@ -45,15 +45,19 @@
       </view>
       <view class='taocan_text flex_around'>
         <view class='taocan_text_s {{tab==index ? "active":""}}' wx:for="{{list}}" wx:for-index="index" data-id="{{index}}" catchtap='set_meal' data-price="{{item.price}}">
-          <view class='vip_title'>{{item.title}}</view>
+          <view class='vip_title' wx:if="{{item.month==1}}">月会员</view>
+          <view class='vip_title' wx:if="{{item.month==3}}">季会员</view>
+          <view class='vip_title' wx:if="{{item.month==12}}">年会员</view>
           <view>
-            <text class='vip_title_price'>￥{{item.price}}</text>
-            <text class='jidu'>/{{item.time}}</text>
+            <text class='vip_title_price'>￥{{item.vip_price}}</text>
+            <text class='jidu' wx:if="{{item.month==1}}">/月</text>
+                  <text class='jidu' wx:if="{{item.month==3}}">/季</text>
+                        <text class='jidu' wx:if="{{item.month==12}}">/年</text>
           </view>
         </view>
       </view>
       <view class='vip_btn_'>
-        <view class='vip_btn_ss' catchtap='sure_open_vip'>确认沟通</view>
+        <view class='vip_btn_ss' catchtap='sure_open_vip'>确认开通</view>
       </view>
     </view>
 

@@ -1,0 +1,5 @@
+<view class="toast">
+  <view class='toast_content'>
+    <text style='font-size:28rpx;'>{{text}}</text>
+  </view>
+</view>

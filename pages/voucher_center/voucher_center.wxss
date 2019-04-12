@@ -67,7 +67,7 @@ line-height: 47rpx;
 .voucer_alert{
   margin-top: 30rpx;
   color: #333333;
-  font-size: 32rpx;
+  font-size: 28rpx;
 }
 .tishi{
   color: #333333;

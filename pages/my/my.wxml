@@ -2,17 +2,16 @@
   <view class='my_top' style='background-image: url("../../images/top_bac.png")'>
     <view class='my_top_user_img flex_between'>
       <view class='flex po_re'>
-        <image src='../../images/user.png' class="usre_image"></image>
+        <image src='{{userInfo.avatarUrl}}' class="usre_image"></image>
         <image src='../../images/Vip.png' class='vip_img'></image>
         <view class="uer_name">
-          <view class='user'>用户053102</view>
+          <view class='user'>{{userInfo.nickName}}</view>
           <view class='flex center po_re'>
             <image src='../../images/img_dengji.png' class='dengji'></image>
             <text class='my_student'>学徒</text>
           </view>
         </view>
       </view>
-      <image src='../../images/right.png' class='right'></image>
     </view>
   </view>
 </view>

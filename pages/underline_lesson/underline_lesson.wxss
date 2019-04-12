@@ -18,6 +18,7 @@ page{
 .data_time{
   padding-left: 20rpx;
   letter-spacing: 2px;
+  font-size: 32rpx;
 }
 .u_banner_c{
   height:366rpx;
@@ -30,16 +31,21 @@ page{
   background-size: 100% 266rpx;
 }
 .u_banner_bottom{
-  height: 100rpx;
+  height: 173rpx;
   background: #fff;
   border-radius:0 0 20rpx 20rpx;
 }
+.address{
+  margin-top: 20rpx;
+}
 .address image{
-  width: 30rpx;
+  width: 40rpx;
   height: 30rpx;
+  padding-left: 21rpx;
 }
 .city{
   color: #999999;
+  font-size: 32rpx;
   padding-left: 10rpx;
   padding-right: 20rpx;
 }
@@ -55,6 +61,7 @@ page{
 }
 .hot_baoming{
   color: #fff;
+  font-size: 28rpx;
 }
 .baoming{
   display: flex;
@@ -62,10 +69,13 @@ page{
   padding-right: 2%;
 }
 .baoming_s{
-  width: 264rpx;
+  width: 243rpx;
   height: 68rpx;
   line-height: 68rpx;
   background: #FF8342;
   border-radius: 0 0 10rpx 10rpx;
   text-align: center;
+}
+.underline_end{
+    background: #ccc;
 }

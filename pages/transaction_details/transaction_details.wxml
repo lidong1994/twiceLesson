@@ -2,16 +2,24 @@
   <view class='transaction_details_c' wx:for="{{list}}">
     <view class='flex_arounds'>
       <view class='flex'>
-        <image src='{{item.image}}' class='images'>
+        <image src='{{item.icon}}' class='images'>
         </image>
         <view class='transaction_details_title'>
-          <view class='transaction_details_title_s ell'>{{item.title}}</view>
-          <view class='trans_de_lesson'>[{{item.type}}]</view>
-          <view class='t_time_e'>{{item.time}}</view>
+          <view class='transaction_details_title_s ell'>{{item.remark}}</view>
+          <view class='trans_de_lesson'>[{{item.source_text}}]</view>
+          <view class='t_time_e'>{{item.create_time}}</view>
         </view>
       </view>
 
-      <view class='cure'>-12.30</view>
+      <view class='cure'>
+        <text wx:if="{{item.action_type==1}}">+</text>
+        <text wx:if="{{item.action_type==-1}}">-</text>
+        <text>{{item.source_value}}</text>
+        <text wx:if="{{item.account_type==1}}">积分</text>
+        <text wx:if="{{item.account_type==2}}">余额</text>
+        <text wx:if="{{item.account_type==3}}">收入</text>
+        <text wx:if="{{item.account_type==5}}">微信</text>
+      </view>
     </view>
   </view>
 </view>

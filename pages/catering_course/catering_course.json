@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+        "loadding": "../../../componerts/loadding/loadding"
+  },
   "navigationBarTitleText": "全部课程"
 }

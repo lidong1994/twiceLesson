@@ -1,4 +1,5 @@
-// pages/seach/seach.js
+const request = require('/../../request/request.js')
+const url = require('/../../url/url.js')
 Page({
 
   /**
@@ -10,50 +11,27 @@ Page({
     input_value: '', //提示内容
     seach_value: '', //输入的内容,
     ipad: 20,
+    types: '全部',
     tab: 0,
     hidden: true,
     type: [{
         title: '全部',
+        id: 0
       },
       {
         title: '课程',
+        id: 1
       },
       {
         title: '工具',
+        id: 2
       },
       {
         title: '咨询',
+        id: 3
       }
     ], //搜索类型
-    hotSeach: [{
-        title: '开餐课堂',
-      },
-      {
-        title: '郭老师',
-      },
-      {
-        title: '咨询',
-      },
-      {
-        title: '旁听',
-      },
-      {
-        title: '课',
-      },
-      {
-        title: '限时免费课',
-      },
-      {
-        title: 'JSONY',
-      },
-      {
-        title: '专题',
-      },
-
-      {
-        title: '丰富',
-      }
-    ],
+    hotSeach: [],
 
     history: []
   },
@@ -62,7 +40,51 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this.getHotSeach()
+  },
+  /**
+   * 获取搜素结果
+   */
+  getSeachValue() {
+    request.requestjSON(url.connect.baseURL + "/search", {
+      keyword: this.data.seach_value,
+      type: this.data.tab,
+      page: 1,
+      page_amount: 20
+    }).then(res => {
+      if (res.data.subject == "" && res.data.tools == "") {
+        this.setData({
+          input_null: false,
+          input_value: '抱歉，没有发现相关内容'
+        })
+      } else {
+        wx.navigateTo({
+          url: '../../pages/seach_result/seach_result?type=' + this.data.tab + '&keyword=' + this.data.seach_value,
+        })
+      }
+    })
+  },
+  /**
+   * **********************************
+   */
+  getSeachValues() {
+    request.requestjSON(url.connect.baseURL + "/search", {
+      keyword: this.data.seach_value,
+      type: this.data.tab,
+      page: 1,
+      page_amount: 20
+    }).then(res => {
+      if (res.data == "" || res.data == []) {
+        this.setData({
+          input_null: false,
+          input_value: '抱歉，没有发现相关内容'
+        })
+      } else {
+        wx.navigateTo({
+          url: '../../pages/seach_result/seach_result?type=' + this.data.tab + '&keyword=' + this.data.seach_value,
+        })
+      }
+    })
   },
   /**
    * 
@@ -83,10 +105,7 @@ Page({
   },
   //每次显示钩子函数都去读一次本地storage
   onShow: function() {
-    let that = this
-    this.setData({
-      history: wx.getStorageSync("history") || []
-    })
+    this.getHotSeach()
     this.ipad()
   },
   /**
@@ -111,8 +130,19 @@ Page({
   select_type(e) {
     this.setData({
       tab: e.currentTarget.dataset.id,
-      seach_value: e.currentTarget.dataset.name
+      types: e.currentTarget.dataset.name,
+      hidden: true
     })
+  },
+  /**
+   * 历史搜索 点击
+   */
+  seach_history(e){
+    var words=e.currentTarget.dataset.words
+    this.setData({
+      seach_value: words
+    })
+    this.seach()
   },
   /**
    * 搜索类型
@@ -132,7 +162,28 @@ Page({
     })
     wx.setStorageSync("history", [])
   },
+  /**
+   * 清空历史搜索
+   */
+  search_clear_history(){
+    request.requestPost(url.connect.baseURL + "/search_clear_history").then(res => {
+      this.clearHistory()
+    })
+  
+  },
+  /**
+   * 获取/历史搜索/热门搜索
+   */
 
+  getHotSeach() {
+    request.requestjSON(url.connect.baseURL + "/search_keywords", ).then(res => {
+      this.setData({
+        hotSeach: res.data.hot_keywords,
+        history: res.data.history_keywords
+      })
+    })
+
+  },
   /**
    * 点击搜索
    */
@@ -146,6 +197,11 @@ Page({
       this.setData({
         input_null: true,
       })
+      if (this.data.tab == 0) {
+        this.getSeachValue()
+      } else {
+        this.getSeachValues()
+      }
       //调取搜索接口 如果返回数据为空则 弹出提示页 否则则携带搜索字段跳转搜索结果页进行接口请求
     }
   },
@@ -154,7 +210,16 @@ Page({
       seach_value: e.detail.value
     })
   },
-
+  /**
+   * 热门搜索点击
+   */
+  seach_hot(e) {
+    var title = e.currentTarget.dataset.title
+    this.setData({
+      seach_value: title
+    })
+    this.seach()
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

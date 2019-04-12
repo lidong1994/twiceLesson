@@ -14,6 +14,12 @@ page {
   width: 100%;
 
 }
+.lesson_title_t_t{
+  font-size: 32rpx;
+  display: inline-block;
+  width: 65%;
+  
+}
 .scroll-header {
 
 padding:20rpx 0 0 12rpx;
@@ -43,28 +49,34 @@ padding:20rpx 0 0 12rpx;
 
 }
 .lesson_details_vedio image{
-  width: 32rpx;
-  height: 50rpx;
+  width: 80rpx;
+  height: 80rpx;
     position: absolute;
-  top: 4%;
-  right: 5%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .active{
   font-weight: 600;
 }
 .lesson_list_title{
-  padding: 45rpx;
+  margin: 27rpx;
 }
 .lesson_list_t_t{
-  padding: 0 32rpx 50rpx 60rpx;
+  padding: 0 32rpx 20rpx 60rpx;
   font-size: 30rpx;
 }
 .lesson_list_title image{
 width: 52rpx;
 height: 56rpx;
 }
+.lesson_title_t{
+  font-size: 32rpx;
+padding-left: 20rpx;
+}
 .lesson_title_t,.lesson_content_c{
   padding-left: 32rpx;
+
 }
 .tabctive{
   color:#ff8432;
@@ -75,14 +87,20 @@ height: 56rpx;
 .btn{
   width: 100%;
   position: absolute;
-  bottom:4%; 
+  bottom:1%; 
 }
 
 .btn_open{
   background: #ffb924;
 }
+.f{
+  font-size: 28rpx;
+}
 .btn_opens{
 background: #ff7f24;
+}
+button{
+  background: #fff;
 }
 .b_c{
    width: 300rpx;
@@ -95,12 +113,19 @@ background: #ff7f24;
 .yixue{
   color: #7C7C7C;
   padding-left: 16%;
-  font-size: 32rpx;
+  font-size: 30rpx;
 }
 .lesson_love image{
    width: 50rpx;
    height: 50rpx;
 }
+.button-hover {
+color:rgba(0, 0, 0, 0.6);
+}
+.share{
+  font-size: 32rpx;
+}
+
 .lesson_love{
   display: flex;
   align-items: center;

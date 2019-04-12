@@ -18,14 +18,13 @@ page{
   padding-bottom:28rpx;
 
 }
-.special_content :nth-child(1){
-  margin-top: 30rpx;
-}
-
 .special_content_c{
   margin-top: 40rpx;
 }
-
+.scroll-header {
+  display: flex;
+  white-space: nowrap;
+}
 .s_s text:nth-child(2){
 display:inline-block;
 border-right:1px solid;
@@ -35,18 +34,15 @@ padding-left:10rpx;
 line-height:32rpx;
 
 }
-.s_s text:nth-child(1){
-display:inline-block;
-border-right:1px solid;
-height:35rpx;
-width:72rpx;
-line-height:32rpx;
 
-}
 .s_s text:nth-child(3){
 padding-left:10rpx;
 }
-
+.swiper-tab-item{
+  display: inline-block;
+  margin: 0 30rpx 0 30rpx;
+  height: 112rpx;
+}
 .s_s text,.s_s_time{
   font-size: 28rpx;
   color: #AFAFAF;
@@ -59,7 +55,7 @@ padding-left:10rpx;
 }
 .special_content_c_img image{
   width: 100%;
-  height: 240rpx;
+  height: 270rpx;
   border-radius: 10rpx;
 }
 .s_s_time{

@@ -1,4 +1,6 @@
-// pages/member_center/member_center.js
+const request = require('/../../request/request.js')
+const url = require('/../../url/url.js')
+const time = require('/../../utils/util.js')
 Page({
 
   /**
@@ -6,6 +8,8 @@ Page({
    */
   data: {
     hiddens: true,
+    images:'',
+    time:'',
     tab:'0',
     pirce:'',
     ipad:'-25',
@@ -58,7 +62,6 @@ this.setData({
    */
   sure_open_vip(){
     if(this.data.price){
-    
       this.setData({
         hiddens: true
       })
@@ -87,10 +90,36 @@ this.setData({
     })
   },
   /**
+   * 获取会员中心
+   */
+  getMemberCenter(){
+    wx.showLoading({
+      title: '加载中',
+    })
+    request.requestjSON(url.connect.baseURL + "/profile_vip_center").then(res => {
+      console.log(res.data.user_info.deadline)
+      var times = time.formatTime(res.data.user_info.deadline)
+      this.setData({
+        activity_images: res.data.activity.activity_images,
+        time: times,
+        images: res.data.introduce_images[0],
+        list: res.data.vip_types
+      })
+    })
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 2000)
+  },
+  imagesLoad(e){
+this.setData({
+  imgHeight:e.detail.height
+})
+  },
+  /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getMemberCenter()
   },
 
   /**

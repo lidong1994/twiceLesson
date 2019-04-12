@@ -1,56 +1,38 @@
 var common=require("../../common/common.js")
+const request = require('/../../request/request.js')
+const url = require('/../../url/url.js')
 Page({
   data: {
     currentTab: 0,
     winHeight: '',
-    lesson: [{
-      images: '../../images/fengmian.jpg',
-      title: "像KFC一样建立数据中心",
-      time: 26,
-      people: 88
-    },
-    {
-      images: '../../images/fengmian.jpg',
-      title: "像KFC一样建立数据中心",
-      time: 26,
-      people: 88
-    },
-    {
-      images: '../../images/fengmian.jpg',
-      title: "像KFC一样建立数据中心",
-      time: 26,
-      people: 88
-    },
-    {
-      images: '../../images/fengmian.jpg',
-      title: "像KFC一样建立数据中心",
-      time: 26,
-      people: 88
-    },
-    {
-      images: '../../images/fengmian.jpg',
-      title: "像KFC一样建立数据中心",
-      time: 26,
-      people: 88
-    },
-      {
-        images: '../../images/fengmian.jpg',
-        title: "像KFC一样建立数据中心",
-        time: 26,
-        people: 88
-      },
-      {
-        images: '../../images/fengmian.jpg',
-        title: "像KFC一样建立数据中心",
-        time: 26,
-        people: 88
-      }
-
-    ]
+    lesson: [],
+    zhuanti:[]
   },
   onLoad() {
     var that = this;
-    this.caleHeight()
+    this.getzhuantiList()
+    this.getLessonList()
+  },
+  /**
+   * 我的课程
+   */
+  getLessonList() {
+    request.requestjSON(url.connect.baseURL + "/exclusive_recommend",).then(res => {
+      console.log(res)
+      this.setData({
+        zhuanti: res.data
+      })
+    })
+  },
+  /**
+   * 我的专题
+   */
+  getzhuantiList(){
+    request.requestjSON(url.connect.baseURL + "/my_package_subjects", { page:1,page_amount:20}).then(res => {
+         this.setData({
+           lesson:res.data
+         })
+    })
   },
    caleHeight() {
     let query = wx.createSelectorQuery();

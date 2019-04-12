@@ -1,13 +1,16 @@
 <!-- 课程详情 -->
 <view class='lesson_details_container contains'>
+<view class='ssss'>
   <view class='lesson_details_vedio po_re'>
-    <video id="myVideo1" src="http://qnvideo.kaicanketang.com/subject_free_url_0_1550644518400.mp4" show-center-play-btn="true" custom-cache="{{false}}" objectFit='fill' poster="https://twice.kaicanketang.com/static/weichat/poster_20190319171931.jpg"></video>
-    <image src='../../images/icon_share.png'></image>
+  <!-- <image src='../../images/video_play.png'></image> -->
+    <video id="myVideo1" src="{{vedioSrc}}" show-center-play-btn="{{false}}" show-play-btn="{{bottom_play}}" custom-cache="{{false}}" objectFit='fill' poster="{{subject_introduce.image_large}}" data-id="1" bindtimeupdate="bindtimeupdate"></video>
+    <image src='../../images/video_play.png' hidden='{{img_video}}' catchtap='video_play' data-type="{{vedio[0].play_status}}" data-time="{{vedio[0].free_time}}"></image>
   </view>
 
   <view class="swiper-tab">
     <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">课程介绍</view>
     <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">课程目录</view>
+  </view>
   </view>
   <swiper current="{{currentTab}}" bindchange="swiperTab" style="height:{{winHeight0}};">
     <swiper-item>
@@ -16,92 +19,74 @@
           <view class='lesson_list_title flexs'>
             <image src='../../images/icon_kc.png' mode="aspectFit"></image>
             <text class='lesson_title_t'>课程：</text>
-            <text class='lesson_title_t_t'>面试的流程和技巧</text>
+            <text class='lesson_title_t_t'>{{subject_introduce.title}}</text>
           </view>
-          <view class='yixue'>88人已学</view>
+          <view class='yixue'>{{subject_introduce.nums}}人已学</view>
           <view class='lesson_list_title flex_around'>
             <view class='lesson_love'>
-              <image src='../../images/icon_soucang_unselect.png'></image>
-              <text class='pl_10'>收藏</text>
+              <image src='../../images/icon_soucang_unselect.png' bindtap='yilove' wx:if="{{love==0}}"></image>
+              <image src='../../images/icon_shoucang_select.png' bindtap='yilove' wx:if="{{love==1}}"></image>
+              <text class='pl_10 share'>收藏</text>
             </view>
             <view class='lesson_love'>
-              <image src='../../images/icon_dz_unselect.png'></image>
-              <text class='pl_10'>20人</text>
+              <image src='../../images/icon_dz_unselect.png' bindtap='yizan' wx:if="{{dianzan==0}}"></image>
+              <image src='../../images/icon_dz_select.png' bindtap='yizan'  wx:if="{{dianzan==1}}"></image>
+              <text class='pl_10 share'>20人</text>
             </view>
             <view class='lesson_love'>
               <image src='../../images/icon_fenxiang.png'></image>
-              <text class='pl_10'>分享</text>
+              <button open-type='share' class='pl_10 share'>分享</button>
             </view>
           </view>
         </view>
 
         <view class='contains index_youxuan'>
           <view class='jianjie'>
-            <image src='{{images}}' model="aspecFill" bindload="imageLoad" style='height:{{imgheight}}rpx'></image>
+            <image src='{{subject_introduce.image_introduction}}' model="aspecFill"  style='height:{{imgheight}}rpx'></image>
           </view>
         </view>
       </view>
     </swiper-item>
-
-
-
-
     <!-- 课程目录 -->
-
-
-
-
-
-
     <swiper-item>
       <view class='lesson_cc'>
         <view class='lesson_list'>
-          <view class='lesson_list_title flexs'>
+          <view class='lesson_list_title flex'>
             <image src='../../images/icon_kc.png' mode="aspectFit"></image>
             <text class='lesson_title_t'>课程：</text>
-            <text class='lesson_title_t_t'>面试的流程和技巧</text>
+            <text class='lesson_title_t_t ell'>{{subject_introduce.title}}</text>
           </view>
           <view class='lesson_list_t'>
-            <view class='lesson_list_t_t {{tab==index ? "tabctive":""}}' wx:for="{{lesson}}" wx:for-index="index" bindtap='lessonTab' data-id='{{index}}'>
-              <text class='lesson_num'>{{item.num}}</text>
+            <view class='lesson_list_t_t {{tab==index ? "tabctive":""}}' wx:for="{{vedio}}" wx:for-index="index" bindtap='lessonTab' data-id='{{index}}' data-src="{{item.file_url}}" data-vid="{{item.vid}}">
+              <text class='lesson_num'>{{index}}</text>
               <text class='lesson_content_c'>{{item.title}}</text>
             </view>
           </view>
         </view>
-        <view class='index_youxuan'>
+        <view class='index_youxuan' wx:if="{{relevant_tools.length}}">
           <view class='index_jingxuan_title'>
             <view class='index_jingxuan_left'></view>
             <view>关联工具</view>
           </view>
 
           <scroll-view class="scroll-header" scroll-x="true" style="width: 100%">
-            <image src='{{item}}' class='scroll_img' wx:for="{{jingxuan}}"></image>
+            <image src='{{item.toolthumb}}' class='scroll_img' wx:for="{{relevant_tools}}"></image>
           </scroll-view>
         </view>
-        <view class='index_lesson_more'>
+        <view class='index_lesson_more' wx:if="{{!aboutLesson}}">
           <view class='index_jingxuan_title'>
             <view class='index_jingxuan_left'></view>
             <view>课程推荐</view>
           </view>
           <view class='flex index_lesson_ii'>
-            <view class='index_lesson_more_lefts'>
+            <view class='index_lesson_more_lefts' wx:for="{{aboutLesson}}">
               <image src='../../images/fengmian.jpg'></image>
               <view class='index_lesson_title'>
-                <text>像KFC建立自己的数据分析模型</text>
+                <text>{{item.title}}</text>
               </view>
               <view class='index_lesson_time'>
-                <text>时长：26分钟/节</text>
-                <text class='index_lesson_num'>88人已学</text>
-              </view>
-            </view>
-            <view class='index_lesson_more_rights'>
-              <image src='../../images/fengmian1.jpg'></image>
-              <view class='index_lesson_title'>
-                <text>像KFC建立自己的数据分析模型</text>
-              </view>
-              <view class='index_lesson_time'>
-                <text>时长：26分钟/节</text>
-                <text class='index_lesson_num'>88人已学</text>
+                <text>时长：{{item.mins}}分钟/节</text>
+                <text class='index_lesson_num'>{{item.nums}}人已学</text>
               </view>
             </view>
           </view>
@@ -109,10 +94,10 @@
         <view class='btn'>
           <view class='flex_around btn_c'>
             <view class='btn_open b_c'>
-              <text>开通会员免费看</text>
+              <text class='f'>开通会员免费看</text>
             </view>
             <view class='btn_opens b_c'>
-              <text>立即购买￥20</text>
+              <text class='f'>立即购买￥{{subject_introduce.fee}}</text>
             </view>
           </view>
         </view>
@@ -120,6 +105,6 @@
     </swiper-item>
   </swiper>
 </view>
-
+<view hidden='{{toast}}'><toast text="{{text}}"></toast></view>
 
 <!-- 课程介绍 -->

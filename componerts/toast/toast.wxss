@@ -1,0 +1,18 @@
+.toast {
+  position: absolute;
+  bottom: 30%;
+  left: 23%;
+  width: 100%;
+  text-align: center;
+}
+
+.toast_content {
+width:54%;
+background:#000;
+opacity:0.8;
+color:#fff;
+height:81rpx;
+border-radius:10rpx;
+line-height:81rpx;
+font-size:30rpx;
+}

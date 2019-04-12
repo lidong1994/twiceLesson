@@ -6,25 +6,29 @@
 
 <swiper current="{{currentTab}}" bindchange="swiperTab" style="height:{{winHeight}}px;">
   <swiper-item>
+  <view wx:if="{{!lesson.length}}" class='center'>
+  <text>暂无数据</text>
+  </view>
     <view class='study_lesson'>
-      <view class='study_lesson_c flex_warp' >
+      <view class='study_lesson_c flex_warp'>
         <view class='study_c_left' wx:for="{{lesson}}">
-          <image src='{{item.images}}' class='study_c_left_img'></image>
-          <view class='ell study_c_title'>{{item.title}}</view>
-          <view class='index_lesson_time'>
-            <text>时长：{{item.time}}分钟/节</text>
-            <text class='index_lesson_num'>{{item.people}}人已学</text>
+          <view wx:if="{{lesson.length}}">
+            <image src='{{item.images}}' class='study_c_left_img'></image>
+            <view class='ell study_c_title'>{{item.title}}</view>
+            <view class='index_lesson_time'>
+              <text>时长：{{item.time}}分钟/节</text>
+              <text class='index_lesson_num'>{{item.people}}人已学</text>
+            </view>
           </view>
+
         </view>
-
       </view>
-
     </view>
   </swiper-item>
 
   <swiper-item>
     <view class='my_lesson'>
-      
+
     </view>
   </swiper-item>
 

@@ -1,4 +1,6 @@
-// pages/my_tool/my_tool.js
+var common = require("../../common/common.js")
+const request = require('/../../request/request.js')
+const url = require('/../../url/url.js')
 Page({
 
   /**
@@ -78,7 +80,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this.getToolsList()
   },
   /**
    * 产看工具详情
@@ -86,6 +88,14 @@ Page({
   tools_details() {
     wx.navigateTo({
       url: '../../pages/tools_details/tools_details',
+    })
+  },
+  /**
+   * 获取我的工具列表
+   */
+  getToolsList(){
+    request.requestjSON(url.connect.baseURL + "/profile_tools_list", { page:1,page_amount:20}).then(res=>{
+      console.log(res)
     })
   },
   /**

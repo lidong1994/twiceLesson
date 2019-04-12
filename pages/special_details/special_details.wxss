@@ -2,7 +2,9 @@
  height: 400rpx;
   width: 100%;
 }
-
+.special_banner image{
+  height: 450rpx;
+}
 .special_lesson_item_xumu,.special_lesson_item_t{
   font-size: 30rpx;
   color: #333333;
@@ -28,9 +30,9 @@
   margin-top: 20rpx;
 }
 .btn{
-  width: 100%;
-  position: absolute;
-  bottom:4%; 
+position:absolute;
+width:100%;
+bottom:0;
 }
 
 .btn_open{
@@ -61,4 +63,7 @@ background: #ff7f24;
 }
 .vip{
   font-size: 28rpx;
+}
+.muen_list{
+  width: 80%;
 }

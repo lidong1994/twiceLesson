@@ -11,46 +11,72 @@
   width: 100%;
   border: 1px solid #ff8342;
   border-radius: 10rpx;
-  height: 227rpx;
+  height: 205rpx;
+  margin-top: 36rpx;
 }
-.my_replacement_c_img image{
-  width: 146rpx;
-  height: 146rpx;
-  padding-top: 27rpx;
+
+.my_replacement_c_img image {
+  width: 117rpx;
+  height: 117rpx;
+  padding-top: 21%;
 }
-.my_replacement_c_img{
-border-right: 1px dashed #CACACA;
-width:208rpx;
-height:205rpx;
-text-align:center;
+
+.my_replacement_c_img {
+  border-right: 1px dashed #cacaca;
+  width: 187rpx;
+  height: 187rpx;
+  text-align: center;
 }
-.my_replacement_ss text{
-  color: #999999;
+
+.my_replacement_ss text {
+  color: #999;
   font-size: 26rpx;
 }
-.l{
+
+.l {
   padding: 20rpx;
 }
-.huangou_time{
+
+.huangou_time {
   font-size: 24rpx;
   height: 50rpx;
   line-height: 50rpx;
   text-align: center;
   border-radius: 10rpx;
-  background: #FFF5F0;
+  background: #fff5f0;
   margin-top: 20rpx;
 }
-.huangou_details{
+
+.huangou_details {
   width: 80rpx;
-  height: 227rpx;
-  writing-mode:tb-rl;
+  height: 205rpx;
+  writing-mode: tb-rl;
   text-align: center;
   line-height: 80rpx;
   background: #ff8325;
   color: #fff;
-  font-size: 32rpx;
-}
-.my_rep_lesson_title{
   font-size: 28rpx;
-  color: #333333;
+  position: relative;
+}
+.huangou_details:before, .huangou_details:after {
+    content: ' ';
+    width: 0;
+    height: 100%;
+    /* 绝对定位进行偏移 */
+    position: absolute;
+    top: 0;
+}
+.huangou_details:before {
+    /* 圆点型的border */
+    border-right: 8px dotted white;
+    /* 偏移一个半径，让圆点的一半覆盖div */
+    left: -5px;
+}
+
+.my_rep_lesson_title {
+  font-size: 28rpx;
+  color: #333;
+}
+.active1{
+    background: #ccc;
 }

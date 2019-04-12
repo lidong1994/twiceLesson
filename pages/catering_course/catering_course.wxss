@@ -3,8 +3,8 @@
     border-top: 1px solid #eee;
     border-bottom: 1rpx solid #eee;
     text-align: center;
-    height: 72rpx;
-    line-height: 72rpx;
+    height: 87rpx;
+    line-height: 87rpx;
     display: flex;
     flex-flow: row;
     font-size: 32rpx;
@@ -12,20 +12,22 @@
     position: relative;
     z-index: 1;
 }
+.scroll-header {
+  display: flex;
+  white-space: nowrap;
+}
 
 .swiper-tab-item{
-    color:#434343;}
-.position{
-  position:relative;
-left:0;
-top:0;
-right:0;
-z-index:1000;
-
-}
+    color:#999999;
+    display: inline-block;
+    padding: 0 20rpx 0 20rpx;
+    font-size: 28rpx;
+    height: 72rpx;
+    }
 .active{
   color:#F65959;
   border-bottom: 6rpx solid #FF8432;
+  height: 81rpx;
 }
 .all_lesson{
   width: 100%;
@@ -46,10 +48,12 @@ z-index:1000;
 }
 .all_lesson_title{
   color: #333333;
-  font-size: 32rpx;
+  font-size: 30rpx;
+  width: 86%;
 }
 .all_lesson_title_p{
   margin-top: 30rpx;
+
 }
 .all_lesson_title_p,.all_lesson_time{
     color: #999999;
@@ -57,6 +61,11 @@ z-index:1000;
 }
 .all_lesson_time{
   margin-top: 16rpx;
+}
+.all_lesson_position{
+  width: 70%;
+  display: inline-block;
+  
 }
 .flex_all_txet,.all_lesson_position,.all_lesson_people{
   padding-left: 30rpx;

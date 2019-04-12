@@ -6,13 +6,21 @@
 }
 .tools_d_header image{
   width:100%;
-    height: 500rpx;
+    height: 100%;
 }
 .tools_header_title{
 width: 100%;
 margin-top: 32rpx;
 
 }
+button{
+  background: #fff;
+}
+.button-hover {
+background-color:#fff;
+
+}
+
 .tools_header_title_pd{
   padding: 32rpx;
 }
@@ -25,9 +33,10 @@ margin-top: 32rpx;
 }
 .tools_header_price_vip_,.tools_header_price_vip{
   color: #ff000d;
+  font-size: 32rpx;
 }
 .tools_header_price_vip{
-  font-size: 42rpx;
+  font-size: 32rpx;
 }
 .tools_header_price_vip_{
   padding-left: 10rpx;
@@ -48,7 +57,7 @@ font-size: 38rpx;
   font-size: 32rpx;
   text-align: center;
   line-height: 50rpx;
-  border-radius: 20rpx;
+  border-radius: 30rpx;
   
 }
 .share_love image{

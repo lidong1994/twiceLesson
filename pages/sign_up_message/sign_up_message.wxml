@@ -26,7 +26,7 @@
       </view>
       <view class='sign_up_select flex-between'>
         <view class='sign_up_input_name1'>
-          <input type='number' maxlength='11' placeholder='sadf' placeholder-class="place-holder" bindinput='inputValue' data-id='phone'></input>
+          <input type='number' maxlength='11' placeholder='' placeholder-class="place-holder" bindinput='inputValue' data-id='phone'></input>
         </view>
       </view>
     </view>
@@ -63,7 +63,7 @@
       </view>
       <view class='sign_up_select1'>
         <view class=''>
-          <textarea placeholder='请填写希望老师帮您解决的问题' placeholder-class='textarea' class='textarea_sign'></textarea>
+          <textarea placeholder='请填写希望老师帮您解决的问题' placeholder-class='textarea' class='textarea_sign' bindinput='inputValue'  data-id='remark'></textarea>
         </view>
       </view>
     </view>

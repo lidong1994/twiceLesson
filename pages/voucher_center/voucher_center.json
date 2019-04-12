@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+        "toast": "../../../componerts/toast/toast"
+  },
   "navigationBarTitleText": "充值中心"
 }

@@ -7,6 +7,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    loaddingHidden:true,
     currentTab: 0,
     indicatorDots: true,
     ipad: "41",
@@ -16,7 +17,7 @@ Page({
     duration: 1000,
     winHeight: '',
     toolsType: [], //工具分类
-    imgUrls: [], //轮播
+    imgUrls: [], //轮播；；；；sssss
     scrollWidth: '',
     toolsList:[],//工具列表
   },
@@ -43,9 +44,10 @@ Page({
     that.setData({
       currentTab: e.detail.current
     });
-    console.log(this.data.toolsList[this.data.currentTab].id)
+    let touchId=[]
+    touchId = this.data.toolsType
+    let id=touchId[this.data.currentTab].id
     this.getToolsLists(id)
-
   },
   clickTab: function(e) {
     var that = this;
@@ -67,14 +69,21 @@ Page({
 
   getToolsLists(id) {
     let that = this
+    wx.showLoading({
+      title: '加载中',
+    })
     request.requestjSON(url.connect.baseURL + "/tools_list", {
       page: '1',
-      page_amount: '15',
+      page_amount: '2',
       category_id: id
     }).then(res => {
+     let length=Number(res.data.length)
+     console.log(res)
       that.setData({
-        toolsList:res.data
+        toolsList:res.data,
+        winHeight:(60*length)
       })
+      wx.hideLoading()
     })
 
   },
@@ -98,6 +107,9 @@ Page({
    */
   getToolsInfo() {
     let that = this
+      wx.showLoading({
+        title: '加载中',
+      })
     request.requestjSON(url.connect.baseURL + "/tools_index", {}).then(res => {
       console.log(res)
       let id=res.data.category[0].id
@@ -109,15 +121,18 @@ Page({
       that.getToolsLists(id)
       that.caleWidth()
       that.ipad()
+
+
     })
   },
   /**
    * 跳转工具详情
    * 
    */
-  tools_details() {
+  tools_details(e) {
+    var id=e.currentTarget.dataset.id 
     wx.navigateTo({
-      url: '../../pages/tools_details/tools_details',
+      url: '../../pages/tools_details/tools_details?id='+id,
     })
   },
   /**

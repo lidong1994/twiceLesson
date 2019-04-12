@@ -1,0 +1,16 @@
+<view class="content">
+  <view class='wx_login'>
+  <view class='login_wechat center'>
+    <image src='../../images/index.png' mode="widthFix"></image>
+  </view>
+    <view class='btn_s'>
+      <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信一键绑定</button>
+    </view>
+  </view>
+
+
+</view>
+<view class='login_wechat_text'>
+  <text class='wx_login'>*注册即代表同意用户使用协议和隐私政策</text>
+</view>
+<view hidden='{{toast}}'><toast text="{{text}}"></toast></view>

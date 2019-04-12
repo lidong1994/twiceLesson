@@ -4,7 +4,7 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    motto: '',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
@@ -29,7 +29,7 @@ Page({
     {
       image: '../../images/vip_center.png',
       text: "会员中心",
-      page: '../../pages/member_center/member_center'
+      path: '../../pages/member_center/member_center'
 
     },
     {

@@ -1,12 +1,14 @@
-
+const request = require('/request/request.js')
+const url = require('/url/url.js')
 App({
   onLaunch: function () {
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
+    this.user_token_validate()
+    // // 登录
+    // wx.login({
+    //   success: res => {
+    //     // 发送 res.code 到后台换取 openId, sessionKey, unionId
+    //   }
+    // })
     // 获取用户信息
     wx.getSetting({
       success: res => {
@@ -29,7 +31,36 @@ App({
     })
 
   },
-
+/**
+ * 校验token
+ * 
+ */
+  user_token_validate(){
+    request.requestPost(url.connect.baseURL + "/user_token_validate").then(res => {
+      if (res.result_code==200){
+        console.log(222)
+        wx.navigateTo({
+          url: '../../pages/index/index',
+        })
+      }
+      if (res.result_code==401){
+        wx.getSetting({
+          success:res=>{
+            if (res.authSetting['scope.userInfo']) {
+              wx.reLaunch({
+                url: '../../pages/wx_logon_phone/wx_logon_phone',
+              })
+            }else{
+              wx.reLaunch({
+                url: '../../pages/phone_login/phone_login',
+              })
+            }
+          }
+        })
+  
+      }
+    })
+  },
   globalData: {
     userInfo: null
   }

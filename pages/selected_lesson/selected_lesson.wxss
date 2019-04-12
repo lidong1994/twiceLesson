@@ -1,0 +1,22 @@
+@import "../../pages/catering_course/catering_course";
+.swiper-tabs{
+      width: 100%;
+    border-top: 1px solid #eee;
+    border-bottom: 1rpx solid #eee;
+    text-align: center;
+    height: 115rpx;
+    line-height: 115rpx;
+    display: flex;
+    flex-flow: row;
+    font-size: 32rpx;
+}
+.swiper-tab-item{
+height:112rpx;
+font-size: 32rpx;
+}
+.active{
+  color: #f65959;
+border-bottom:6rpx solid #FF8432;
+height:112rpx;
+
+}

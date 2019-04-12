@@ -3,32 +3,38 @@
   <view>
     <view class='index_seach'>
       <image src='../../images/icon_sousuo.png' class='sousuo'></image>
-      <input value='请输入您想搜索的内容' class='seach_input'></input>
+      <input value='请输入您想搜索的内容' class='seach_input' bindtap='seach'></input>
     </view>
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
       <block wx:for="{{imgUrls}}" wx:key="index">
         <swiper-item class="swiper">
-          <image src="{{item.imgUrl}}" class="slide-image" width="355" height="150" data-id="{{item.target}}" />
+          <image src="{{item.imgUrl}}" class="slide-image" width="355" height="150" data-id="{{item.target}}" data-type="{{item.type}}" bindtap='banner_details'/>
         </swiper-item>
       </block>
     </swiper>
   </view>
   <view class='index_utils'>
     <view class='flex_around center'>
-      <view class='index_yunying' bindtap='utils' wx:for="{{meunList}}" data-id='{{item.target}}' wx:key="id">
+      <view class='index_yunying' bindtap='utils' wx:for="{{meunList}}"  data-id='{{item.target}}' wx:key="id">
         <image src='{{item.imgUrl}}'></image>
         <view class='pt_20 pd_20 index_meun'>{{item.title}}</view>
       </view>
     </view>
   </view>
   <view class='index_jingxuan'>
-    <view class='index_jingxuan_title'>
-      <view class='index_jingxuan_left'></view>
-      <view class='index_meun_title'>精选专题</view>
+    <view class='index_jingxuan_title flex_between'>
+      <view class='flex'>
+        <view class='index_jingxuan_left'></view>
+        <view class='index_meun_title'>精选专题</view>
+      </view>
+      <view class='index_more flex' bindtap='special_more'>
+        <text>更多</text>
+        <image src='../../images/right.png'></image>
+      </view>
     </view>
 
     <scroll-view class="scroll-header" scroll-x="true" style="width: 100%">
-      <image src='{{item.imgUrl}}' class='scroll_img' wx:for="{{jingxuan}}" data-id="{{item.target}}" wx:key="index"></image>
+      <image src='{{item.imgUrl}}' class='scroll_img' wx:for="{{jingxuan}}" data-id="{{item.target}}" bindtap='special_detials' wx:key="index"></image>
     </scroll-view>
   </view>
   <!-- 工具优选 -->
@@ -39,7 +45,7 @@
     </view>
 
     <scroll-view class="scroll-header" scroll-x="true" style="width: 100%">
-      <image src='{{item.toolthumb}}' class='scroll_img' wx:for="{{tools}}" data-id='{{item.tid}}' wx:key="index"></image>
+      <image src='{{item.toolthumb}}' class='scroll_img' wx:for="{{tools}}" data-id='{{item.tid}}' wx:key="index" bindtap='tools_details'></image>
     </scroll-view>
   </view>
   <!-- 线下课程 -->
@@ -49,13 +55,13 @@
         <view class='index_jingxuan_left'></view>
         <view class='index_meun_title'>线下课程</view>
       </view>
-      <view class='index_more flex'>
+      <view class='index_more flex' bindtap='line_more'>
         <text>更多</text>
         <image src='../../images/right.png'></image>
       </view>
     </view>
     <view class='index_lesson_img'>
-      <image src='{{underlineLesson.thumb}}' mode='scaleToFill' class='index_lesson_img_i'></image>
+      <image src='{{underlineLesson.thumb}}' mode='scaleToFill' class='index_lesson_img_i' bindtap='online_down' data-id='{{underlineLesson.un_id}}'></image>
     </view>
   </view>
   <!-- 在线精选 -->
@@ -65,7 +71,7 @@
         <view class='index_jingxuan_left'></view>
         <view class='index_meun_title'>在线精选</view>
       </view>
-      <view class='index_more flex'>
+      <view class='index_more flex' bindtap='select_more'>
         <text>更多</text>
         <image src='../../images/right.png'></image>
       </view>
@@ -85,8 +91,8 @@
   </view>
 
   <view class='index_lesson_more'>
-    <view class='flex index_lesson_ii'>
-      <view class='index_lesson_more_lefts' wx:for="{{recommendSubjectsList}}" wx:key="index" data-id='{{item.target}}'>
+    <view class='flex_around_warp index_lesson_ii'>
+      <view class='index_lesson_more_lefts' wx:for="{{recommendSubjectsList}}" wx:key="index" data-id='{{item.target}}' bindtap='online_details'>
         <image src='{{item.imgUrl}}'></image>
         <view class='index_lesson_title ell'>
           <text>{{item.title}}</text>
@@ -103,12 +109,18 @@
 
   <!-- 限免精选 -->
   <view class='index_free'>
-    <view class='flex'>
-      <view class='index_jingxuan_left'></view>
-      <view class='index_meun_title'>限免精选</view>
+  <view class='index_jingxuan_title flex_between'>
+      <view class='flex'>
+        <view class='index_jingxuan_left'></view>
+        <view class='index_meun_title'>限免精选</view>
+      </view>
+      <view class='index_more flex' bindtap='free_more'>
+        <text>更多</text>
+        <image src='../../images/right.png'></image>
+      </view>
     </view>
     <view class='index_free_content' wx:for="{{timeLimitList1}}" wx:key="index">
-      <view class='index_free_content_c flexs' data-id='{{item.target}}'>
+      <view class='index_free_content_c flexs' data-id='{{item.target}}' bindtap='free_details'>
         <view class='index_free_img'>
           <image src='{{item.imgUrl}}'></image>
         </view>
@@ -135,3 +147,4 @@
     </view>
   </view>
 </view>
+<view hidden='{{loaddingHidden}}'><loadding></loadding></view>

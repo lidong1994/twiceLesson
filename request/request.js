@@ -1,9 +1,9 @@
 var Dec = require('../aes_ecb/test.js'); //引用封装好的加密解密js
 let sign=function(){
   var timestamp = Date.parse(new Date());
+  console.log(timestamp)
   var s=""
   var token = wx.getStorageSync("token") || "";
-  console.log(token)
   wx.getSystemInfo({
     success(res) {
       let sign = {

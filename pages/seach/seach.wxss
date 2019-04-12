@@ -116,8 +116,12 @@ font-size:28rpx;
 .seach_history_all{
   font-size: 28rpx;
   color: #999999;
-}
 
+}
+.seach_xiexian{
+  padding: 0 5rpx 0 5rpx;
+    color: #999999;
+}
 .seach_history_type{
     font-size: 24rpx;
   color: #999999;

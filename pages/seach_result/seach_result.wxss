@@ -1,1 +1,36 @@
-@import '../../pages/catering_course/catering_course.wxss'
+@import '../../pages/catering_course/catering_course.wxss';
+@import '../../pages/operation_tools/operation_tools.wxss';
+.ell{
+    overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.flex{
+  display: flex;
+  align-items: center;
+}
+.all_title{
+  padding-left: 30rpx;
+  font-weight: 600;
+}
+.bindtab_more{
+  font-size: 30rpx;
+}
+.more_seach{
+  height: 80rpx;
+  border-top: 1px solid #EAEAEA;
+  border-bottom: 1px solid #EAEAEA;
+  line-height: 80rpx;
+}
+.all_lesson_title{
+  color:#333333;
+font-size:30rpx;
+width:56%;
+
+}
+.all_lesson_position{
+  width:43%;
+display:inline-block;
+font-size:28rpx;
+
+}

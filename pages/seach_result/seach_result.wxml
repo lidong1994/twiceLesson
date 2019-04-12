@@ -1,21 +1,48 @@
- <view class="all_lesson" wx:for="{{lesson}}" bindtap='lesson_details'>
-      <view class='all_lesson_content'>
-        <view class='flexs'>
-          <view class='flex_all_img'>
-            <image src='{{item.images}}'></image>
-          </view>
-          <view class='flex_all_txet'>
-            <view class='all_lesson_title'>{{item.title}}</view>
-            <view class='all_lesson_title_p'>
-              <text class='all_lesson_name'>{{item.name}}</text>
-              <text class='all_lesson_position'>{{item.position}}</text>
-            </view>
-            <view class='all_lesson_time'>
-              <text class='all_lesson_dom'>{{item.time}}分钟/节</text>
-              <text class='all_lesson_people'>{{item.people}}人已学</text>
-            </view>
-          </view>
+<view class="all_lesson" wx:if="{{subject.length}}">
+  <view class='all_title'>课程</view>
+  <view class='all_lesson_content' wx:for="{{subject}}" bindtap='lesson_details' data-id="{{item.sid}}">
+    <view class='flexs'>
+      <view class='flex_all_img'>
+        <image src='{{item.image_small}}'></image>
+      </view>
+      <view class='flex_all_txet'>
+        <view class='all_lesson_title ell'>{{item.title}}</view>
+        <view class='all_lesson_title_p flex'>
+          <text class='all_lesson_name'>{{item.teacher}}</text>
+          <text class='all_lesson_position ell'>{{item.desc}}</text>
+        </view>
+        <view class='all_lesson_time'>
+          <text class='all_lesson_dom'>{{item.video_mins}}分钟/节</text>
+          <text class='all_lesson_people'>{{item.nums}}人已学</text>
         </view>
       </view>
-      
     </view>
+  </view>
+  <view class='center more_seach' hidden='{{hidden_more}}' bindtap='more_b' data-id="1">
+    <text class='bindtab_more'>{{more}}</text>
+  </view>
+</view>
+<view class='tolls_contain' wx:if="{{tools.length}}">
+  <view class='all_title'>工具</view>
+
+  <view class='index_free_content' wx:for="{{tools}}" bindtap='tools_details' data-id="{{item.tid}}">
+    <view class='index_free_content_c flexs' wx:for="{{item.category}}" wx:for-item="v">
+      <view class='index_free_img'>
+        <image src='{{item.toolthumb}}'></image>
+      </view>
+      <view class='index_free_text'>
+        <view class='index_free_title'>{{item.title}}</view>
+        <view class='index_free_time'>
+          <text>{{v.title}}</text>
+        </view>
+        <view class='index_free_time1 flex'>
+          <image src='../../images/icon_liulanliang.png' class='time'></image>
+          <text class='index_free_time_t'>{{item.down_times}}</text>
+          <image src='../../images/icon_shoucang_unselect.png' class='time'></image>
+          <text class='index_free_time_t'>{{item.collection_times}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='center more_seach' hidden='{{hidden_more1}}' bindtap='more_b' data-id="2"><text class='bindtab_more'>{{more1}}</text></view>
+</view>

@@ -1,11 +1,11 @@
 <view class="my_love">
   <view class='my_love_content' wx:for="{{list}}">
-    <view class='flex_between ma_au'>
+    <view class='flex_between ma_au' bindlongpress="longpress" data-id="{{item.id}}">
       <view class='my_love_image flex'>
-      <image src='../../images/icon_wenzhang.png'></image>
+      <image src='{{item.icon}}'></image>
       <text class='my_love_text ell'>{{item.title}}</text>
       </view>
-      <view class='my_love_time'>{{item.time}}</view>
+      <view class='my_love_time'>{{item.create_time}}</view>
     </view>
 
   </view>

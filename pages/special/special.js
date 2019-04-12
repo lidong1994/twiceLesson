@@ -1,4 +1,6 @@
 var common = require("../../common/common.js")
+const request = require('/../../request/request.js')
+const url = require('/../../url/url.js')
 Page({
 
   /**
@@ -6,74 +8,88 @@ Page({
    */
   data: {
     currentTab: 0,
-    list: [{
-      image: '../../images/fengmian.jpg',
-      title: '西餐主厨必修课程',
-      dom: 6,
-      time: 60,
-      text: [
-        { t: '西餐' },
-         { t: '主厨', }, 
-         { t: '专题' }]
-    },
-      {
-        image: '../../images/fengmian.jpg',
-        title: '西餐主厨必修课程',
-        dom: 6,
-        time: 60,
-        text: [
-          { t: '西餐' },
-          { t: '主厨', },
-          { t: '专题' }]
-      },
-      {
-        image: '../../images/fengmian.jpg',
-        title: '西餐主厨必修课程',
-        dom: 6,
-        time: 60,
-        text: [
-          { t: '西餐' },
-          { t: '主厨', },
-          { t: '专题' }]
-      },
-      {
-        image: '../../images/fengmian.jpg',
-        title: '西餐主厨必修课程',
-        dom: 6,
-        time: 60,
-        text: [
-          { t: '西餐' },
-          { t: '主厨', },
-          { t: '专题' }]
-      }],
-
+    tab:[],
+    tabLength:[0,1,2],
+    tabId:'',
+    list: [],
+    winHeight:''
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.caleHeight()
+    this.getTabList()
   },
-  caleHeight() {
+/**
+ * 获取系列专题列表
+ */
+  getLessonList(id){
+
+    request.requestjSON(url.connect.baseURL + "/subject_package", { page: 1, page_amount:20,cid:id}).then(res => {
+    console.log(res)
+    if(res.data==[]||res.data==""){
+      this.setData({
+        winHeight: 350,
+        list:[]
+      })
+      wx.hideLoading();
+      return false;
+    }else{
+      this.setData({
+        list: res.data,
+      })
+      this.caleHeight(res.data.length)
+    }
+  
+
+    })
+  },
+  /**\
+   * 动态计算高度
+   */
+  caleHeight(length) {
     let query = wx.createSelectorQuery();
     query.select('.special_content_c').boundingClientRect(rect => {
       let clientHeight = parseInt(rect.height);
-      if (this.data.currentTab == 0) {
-        var haha = common.isCales(this.data.list, clientHeight)
-        this.setData({
-          winHeight: haha+120
-        })
-      }
+      console.log(clientHeight)
+      this.setData({
+        winHeight: (clientHeight+25)*length
+      })
     }).exec();
+    setTimeout(() => {
+      wx.hideLoading();
+    }, 1100);
+  },
+  /**
+   * 获取标签分类
+   */
+  getTabList(){
+    wx.showLoading({
+      title: '加载中',
+    })
+    request.requestjSON(url.connect.baseURL + "/subject_package_category",).then(res => {
+      console.log(res)
+        this.setData({
+          tab:res.data,
+          tabLength:res.data.length,
+        })
+      this.getLessonList(res.data[0].id)
+    })
   },
   swiperTab: function (e) {
     var that = this;
     that.setData({
       currentTab: e.detail.current
     });
+    let tabId = []
+    tabId = this.data.tab
+    let id = tabId[this.data.currentTab].id
+    this.getLessonList(id)
   },
   clickTab: function (e) {
+    var id=e.currentTarget.dataset.id
+    console.log(id)
     var that = this;
     if (this.data.currentTab === e.target.dataset.current) {
       return false;
@@ -81,7 +97,19 @@ Page({
       that.setData({
         currentTab: e.target.dataset.current
       })
+      this.getLessonList(id)
     }
+  },
+  /**
+   * 专题跳转详情
+   */
+  special_details(e){
+    var id=e.currentTarget.dataset.id
+    var image = e.currentTarget.dataset.image
+    console.log(id)
+    wx.navigateTo({
+      url: '../../pages/special_details/special_details?id='+id+'&image='+image,
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

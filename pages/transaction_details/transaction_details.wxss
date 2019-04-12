@@ -1,6 +1,6 @@
 .images {
-  width: 110rpx;
-  height: 110rpx;
+  width: 88rpx;
+  height: 88rpx;
 }
 
 .transaction_details {
@@ -20,12 +20,12 @@
 }
 
 .transaction_details_title_s, .trans_de_lesson {
-  font-size: 32rpx;
+  font-size: 28rpx;
   color: #323232;
 }
 
 .t_time_e {
-  font-size: 32rpx;
+  font-size: 28rpx;
   color: #999;
 }
 
@@ -41,4 +41,6 @@
 
 .cure {
   padding-top: 20rpx;
+  font-size: 28rpx;
+  color: #ff8342;
 }

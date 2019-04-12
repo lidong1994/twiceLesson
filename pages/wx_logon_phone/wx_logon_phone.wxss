@@ -1,0 +1,40 @@
+.wx_login{
+  width:100%;
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+.wx_login_title{
+  font-size: 32rpx;
+  text-align: center;
+}
+.btn_s{
+  width: 80%;
+  margin: auto;
+  margin-top: 156rpx;
+  
+}
+.login_wechat image {
+  width: 430rpx;
+  height: 100rpx;
+}
+button{
+    background: #40BC3A;
+    color: #fff;
+    font-size: 28rpx;
+}
+.wx_login{
+  font-size: 28rpx;
+
+}
+.login_wechat_text{
+  width: 100%;
+  position: fixed;
+  bottom: 5%;
+  text-align: center;
+
+}

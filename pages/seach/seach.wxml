@@ -1,7 +1,7 @@
 <view class="seach flex">
   <view class='seach_content flex'>
     <view class='seach_left flex'>
-      <text class='seach_all'>全部</text>
+      <text class='seach_all'>{{types}}</text>
       <image src='../../images/icon_xiangxia.png' wx-if="{{hidden==true}}" bindtap='seach_type'></image>
       <image wx-if="{{hidden==false}}" src='../../images/icon_xiangshang.png' bindtap='seach_type'></image>
     </view>
@@ -19,7 +19,7 @@
   <view class='hot_seach_content'>
     <view class='hot_seach_text'>热门搜索</view>
     <view class='flex_between_warp seach_margin'>
-      <view class='hot_seach_t' wx:for="{{hotSeach}}">{{item.title}}</view>
+      <view class='hot_seach_t' wx:for="{{hotSeach}}" bindtap='seach_hot' data-title='{{item.keywords}}'>{{item.keywords}}</view>
     </view>
   </view>
 </view>
@@ -27,17 +27,20 @@
   <view class='hot_seach_content'>
     <view class='flex_between'>
       <text class='hot_seach_text'>搜索历史</text>
-      <image src='../../images/icon_bxh.png' class='seach_delete_image' catchtap='clearHistory'></image>
+      <image src='../../images/icon_bxh.png' class='seach_delete_image' catchtap='search_clear_history'></image>
     </view>
   </view>
 
 </view>
 <view class='seach_history_list'>
-  <view class='flex seach_history_list_text' wx:for="{{history}}">
-    <text class='seach_history_title'>{{item}}</text>
-    <text class='seach_history_all'>{{item.type}}</text>
-    <text class='gang'>/</text>
-    <text class='seach_history_type'>{{item.lesson}}</text>
+  <view class='flex seach_history_list_text' wx:for="{{history}}" wx:for-index="index" wx:key="index" bindtap='seach_history' data-words="{{item.keywords}}">
+    <text class='seach_history_title'>{{item.keywords}}</text>
+    <text class='seach_history_all'>分类</text>
+    <text class='seach_xiexian'>/</text>
+    <text class='seach_history_type' wx:if="{{item.search_type==0}}">全部</text>
+        <text class='seach_history_type' wx:if="{{item.search_type==1}}">课程</text>
+            <text class='seach_history_type' wx:if="{{item.search_type==2}}">工具</text>
+                <text class='seach_history_type' wx:if="{{item.search_type==3}}">文章</text>
   </view>
 </view>
 
@@ -46,7 +49,7 @@
   <view class='ys-dialog' style='position:fixed;top:{{ipad}}%'>
     <view class='header_seach_type'>
       <view class='flex_between_warp header_seach_ccc'>
-      <text wx:for="{{type}}" wx:for-index="index" data-id="{{index}}" data-name="{{item.title}}" catchtap='select_type' class='seach_type {{tab==index ? "active" :""}}'>{{item.title}}</text>
+      <text wx:for="{{type}}" wx:for-index="index" data-id="{{item.id}}" data-name="{{item.title}}" catchtap='select_type' class='seach_type {{tab==index ? "active" :""}}'>{{item.title}}</text>
       </view>
     </view>
   </view>

@@ -1,8 +1,9 @@
+
 <view class='contanin'>
   <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class='swiper_img'>
     <block wx:for="{{imgUrls}}">
       <swiper-item class="swiper">
-        <image src="{{item.imgUrl}}" class="slide-image" width="355" height="150" />
+        <image src="{{item.imgUrl}}" class="slide-image" width="355" height="150" data-id='{{item.target}}' bindtap='tools_details' />
       </swiper-item>
     </block>
   </swiper>
@@ -19,20 +20,19 @@
   </scroll-view>
 </view>
 
-<swiper current="{{currentTab}}" bindchange="swiperTab" style='height:750rpx;'>
+<swiper current="{{currentTab}}" bindchange="swiperTab" style="height:750rpx;">
   <swiper-item wx:for="{{tabLength}}">
-    <scroll-view scroll-y="true" style="height:100%;" enable-back-to-top="true">
+    <scroll-view scroll-y="true" style="height:750rpx;" enable-back-to-top="true">
       <view class='tolls_contain'>
-
-        <view class='index_free_content' wx:for="{{toolsList}}" bindtap='tools_details'>
-          <view class='index_free_content_c flexs'>
+        <view class='index_free_content' wx:for="{{toolsList}}"  bindtap='tools_details' data-id="{{item.tid}}">
+          <view class='index_free_content_c flexs'  wx:for="{{item.category}}"  wx:for-item="v">
             <view class='index_free_img'>
               <image src='{{item.toolthumb}}'></image>
             </view>
             <view class='index_free_text'>
               <view class='index_free_title'>{{item.title}}</view>
               <view class='index_free_time'>
-                <text wx:for="{{item.category}}" wx:for-item="v">{{v.title}}</text>
+                <text>{{v.title}}</text>
               </view>
               <view class='index_free_time1 flex'>
                 <image src='../../images/icon_liulanliang.png' class='time'></image>
@@ -51,3 +51,4 @@
   </swiper-item>
 
 </swiper>
+<!-- <view hidden='{{loaddingHidden}}'><loadding></loadding></view> -->

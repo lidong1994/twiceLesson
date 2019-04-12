@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "toast": "../../../componerts/toast/toast"
+  },
+  "navigationBarTitleText": "手机号登录"
+}
